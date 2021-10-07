@@ -4,15 +4,16 @@
 		"target": "ES5",
 
 		"jsx": "react",
-		"module": "CommonJS",
+		"module": "ESNext",
 		"moduleResolution": "Node",
 
-		"sourceMap": false,
-		"declaration": true,
+		"sourceMap": true,
+		"declaration": false,
 		"importHelpers": true,
 		"removeComments": true,
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
+		"preserveConstEnums": true,
 		"allowSyntheticDefaultImports": true,
 
 		"strict": true,
@@ -20,14 +21,18 @@
 		"checkJs": false,
 		"noImplicitAny": false,
 		"noUnusedLocals": true,
-		"strictNullChecks": true,
+		"strictNullChecks": false,
 		"noUnusedParameters": true,
 	},
 	"include": [
-	  "src/**/*.ts",
-	  "src/**/*.tsx",
+		"./src/"
 	],
 	"exclude": [
-		"node_modules"
+		"/node_modules/*"
 	]
 }
+
+// Lektüre
+// https://www.typescriptlang.org/docs/home.html
+// https://www.typescriptlang.org/docs/handbook/compiler-options.html
+// https://www.typescriptlang.org/docs/handbook/module-resolution.html

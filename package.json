@@ -1,0 +1,27 @@
+{
+  "name": "@phoenixreisen/reacts",
+  "version": "1.0.0",
+  "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "phoenix",
+    "reisen",
+    "design",
+    "system",
+    "js",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Fabian Marcus <it@phoenixreisen.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.27"
+  }
+}

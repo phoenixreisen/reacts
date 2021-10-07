@@ -1,38 +1,33 @@
-# Phoenix Loader
+# Phoenix React Komponenten
 
-Ladeanzeige(n) für API-Abfragen oder ähnliches.
+Sammlung von React Implementierungen für die jeweiligen Komponenten des Design Systems.
 
-Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
+Die Komponenten sind Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
 
 ## Installation
 
-[Mithril](https://mithril.js.org/) wird benötigt.
+[React](https://reactjs.org/) wird benötigt.
 
 ```bash
-npm install --save @phoenixreisen/loader
+npm install --save @phoenixreisen/reacts
 ```
 
 ## Anwendung
 
-```js
-// entweder CommonJS
-const Loader = require('@phoenixreisen/loader');
+```ts
+import <KOMPONENTE> from '@phoenixreisen/reacts/<KOMPONENTE>';
 
-// oder ES6+
-import Loader from '@phoenixreisen/loader';
+// zum Beispiel
+import Loader from '@phoenixreisen/reacts/loader';
+import Notifications from '@phoenixreisen/reacts/header';
 ```
 
-#### Aufruf
+Weitere Informationen bzgl. Einbindung & Aufruf sind in der Readme der jeweiligen Komponente hinterlegt.
 
-```js
-// Hyperscript
-m(Loader);
-m(Loader, { type: 'overlay', text: 'Daten werden geladen...' });
-
-// JSX
-<Loader />
-<Loader type="overlay" text="Daten werden geladen..." />
-```
+- [Loader](./loader/README.md)
+- [Header](./header/README.md)
+- [Notifications](./notifications/README.md)
+- ...
 
 ## Test
 
@@ -44,7 +39,7 @@ npm test
 ## Deployment
 
 ```bash
-npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
-npm publish                         # upload to npm
+npm version [major|minor|patch] # increase version x.x.x => major.minor.patch
+npm publish                     # upload to npm
 git push
 ```

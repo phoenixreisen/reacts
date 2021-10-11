@@ -40,6 +40,9 @@ const demos = [
                 copy({
                     targets: [
                         {src:`./src/${current}/docs/index.html`, dest:`./docs/${current}/`},
+                        {src:`./src/${current}/**/*.png`, dest:`./docs/${current}/`},
+                        {src:`./src/${current}/**/*.jpg`, dest:`./docs/${current}/`},
+                        {src:`./src/${current}/**/*.svg`, dest:`./docs/${current}/`},
                     ]
                 })
             ]

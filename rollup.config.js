@@ -16,10 +16,10 @@ export const plugins = [
 const demos = [
     'header',
     'footer',
+    'loader',
     'accordion',
     // 'banners',
     // 'dropdown',
-    // 'laoder',
     // 'modal',
     // 'notification',
     // 'slider',
@@ -32,7 +32,7 @@ const demos = [
                 name: 'bundle',
                 format: 'iife',
                 sourcemap: true,
-                file: `./src/${current}/docs/example.min.js`,
+                file: `./docs/${current}/demo.min.js`,
             },
             plugins
         };

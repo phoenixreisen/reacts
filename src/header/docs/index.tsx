@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Header, Topbar } from '../index.r';
 import React, { useState } from 'react';
+import { Header, Topbar } from '..';
 import ReactDOM from 'react-dom';
 
 export const Root = () => {

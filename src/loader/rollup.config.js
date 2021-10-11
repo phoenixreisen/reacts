@@ -10,7 +10,7 @@ export const Demo = {
         name: 'bundle',
         format: 'iife',
         sourcemap: true,
-        file: `./docs/example.min.js`,
+        file: `../../docs/loader/demo.min.js`,
     },
     plugins: [
         css(),

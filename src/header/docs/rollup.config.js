@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
+import url from '@rollup/plugin-url';
 
 export const Demo = {
     input: `./docs/index.tsx`,
@@ -9,7 +10,7 @@ export const Demo = {
         name: 'bundle',
         format: 'iife',
         sourcemap: true,
-        file: `../../docs/accordion/demo.min.js`,
+        file: `../../docs/footer/demo.min.js`,
     },
     plugins: [
         css(),
@@ -19,6 +20,7 @@ export const Demo = {
         }),
         commonjs(),
         resolve(),
+        url({limit: 0}),
     ],
 };
 

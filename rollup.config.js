@@ -2,16 +2,9 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
+import copy from 'rollup-plugin-copy';
 import url from '@rollup/plugin-url';
 import fs from 'fs';
-
-export const plugins = [
-    css(),
-    typescript({sourceMap: true}),
-    commonjs(),
-    resolve(),
-    url({limit: 0}),
-];
 
 const demos = [
     'header',
@@ -34,7 +27,22 @@ const demos = [
                 sourcemap: true,
                 file: `./docs/${current}/demo.min.js`,
             },
-            plugins
+            plugins: [
+                css(),
+                typescript({
+                    sourceMap: true
+                }),
+                commonjs(),
+                resolve(),
+                url({
+                    limit: 0
+                }),
+                copy({
+                    targets: [
+                        {src:`./src/${current}/docs/index.html`, dest:`./docs/${current}/`},
+                    ]
+                })
+            ]
         };
     }
 });

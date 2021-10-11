@@ -10,7 +10,7 @@ export const Demo = {
         name: 'bundle',
         format: 'iife',
         sourcemap: true,
-        file: `../../docs/footer/demo.min.js`,
+        file: `../../docs/header/demo.min.js`,
     },
     plugins: [
         css(),
@@ -21,6 +21,11 @@ export const Demo = {
         commonjs(),
         resolve(),
         url({limit: 0}),
+        copy({
+            targets: [
+                {src:`./docs/index.html`, dest:`../../docs/header/demo.min.js`},
+            ]
+        })
     ],
 };
 

@@ -21,6 +21,11 @@ export const Demo = {
         commonjs(),
         resolve(),
         url({limit: 0}),
+        copy({
+            targets: [
+                {src:`./docs/index.html`, dest:`../../docs/footer/demo.min.js`},
+            ]
+        })
     ],
 };
 

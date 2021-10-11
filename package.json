@@ -4,6 +4,7 @@
   "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
   "main": "index.js",
   "scripts": {
+    "compile:demos": "npx rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,9 +20,28 @@
   "author": "Fabian Marcus <it@phoenixreisen.com>",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2"
+    "clipboard": "^2.0.8",
+    "mithril": "^2.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "swiper": "^7.0.8"
   },
   "devDependencies": {
-    "@types/react": "^17.0.27"
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-multi-entry": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@rollup/plugin-url": "^6.1.0",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.3.1",
+    "gh-pages": "^3.1.0",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^16.4.0",
+    "rollup": "^2.38.5",
+    "rollup-plugin-css-only": "^3.1.0",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
   }
 }

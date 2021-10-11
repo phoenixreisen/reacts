@@ -38,8 +38,8 @@ export const Topbar = (props: AttrProps) => {
 
     useEffect(() => {
         setHeader(document.querySelector('.header') as HTMLElement || null);
-        window.addEventListener('scroll', _checkPosition.bind(this, { $header, isVisible, setIsVisible }), true);
-        window.addEventListener('touchmove', _checkPosition.bind(this, { $header, isVisible, setIsVisible }), true);
+        window.addEventListener('scroll', _checkPosition.bind(null, { $header, isVisible, setIsVisible }), true);
+        window.addEventListener('touchmove', _checkPosition.bind(null, { $header, isVisible, setIsVisible }), true);
     }, [$header, isVisible]);
 
     return (
@@ -60,7 +60,7 @@ export const Topbar = (props: AttrProps) => {
 
                 {props.toggleAvatar ?
                     <article className="top-bar__avatar noprint">
-                        <Link to="javascript:" className="avatar-cta avatar-cta--topbar"
+                        <Link to="#" className="avatar-cta avatar-cta--topbar"
                             title="Service, Einstellungen & Optionen"
                             onClick={(e) => props.toggleAvatar(e)}>
                             <i className="fas fa-user avatar__symbol"></i>
@@ -69,7 +69,7 @@ export const Topbar = (props: AttrProps) => {
                     : ''}
 
                 {props.toggleNav ?
-                    <Link to="javascript:" className="nav-btn top-bar__nav-btn noprint"
+                    <Link to="#" className="nav-btn top-bar__nav-btn noprint"
                         title="Navigation ein-/ausblenden"
                         onClick={(e) => props.toggleNav(e)}>
                         <i className="fas fa-bars"></i>

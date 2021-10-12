@@ -36,5 +36,6 @@ export const enum ICONS {
 // Mögliche Stati
 export const enum STATUS {
     error = 'error',
+    normal = 'normal',
     success = 'success',
 }

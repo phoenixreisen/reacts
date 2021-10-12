@@ -13,7 +13,7 @@ export const Notifications = () => {
 
     return (
         <React.Fragment>
-            {notes().map((note:NoteObject, index:number) =>
+            {notes().map?.((note:NoteObject, index:number) =>
                 <Notification
                     key={index}
                     text={note.text}

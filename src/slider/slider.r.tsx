@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '/src/shared/components/slider/slider.style.scss';
+import './slider.style.scss';
 
 //--- Types -----
 

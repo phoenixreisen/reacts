@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
+import scss from 'rollup-plugin-scss';
 import copy from 'rollup-plugin-copy';
 import url from '@rollup/plugin-url';
 
@@ -11,11 +12,11 @@ const demos = [
     'header',
     'footer',
     'loader',
+    'slider',
     'dropdown',
     'accordion',
     'notification',
     // 'banners',
-    // 'slider'
 ].map(current => {
     return {
         input: `./src/${current}/docs/index.tsx`,
@@ -26,6 +27,7 @@ const demos = [
             file: `./docs/${current}/demo.min.js`,
         },
         plugins: [
+            scss(),
             css(),
             typescript({
                 sourceMap: true

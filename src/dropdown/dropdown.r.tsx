@@ -34,11 +34,11 @@ export const Dropdown = (props:Props) => {
                 {icon ? <i className={`fas ${icon} mr1`} aria-hidden="true"></i> : ''} {title || ''}
             </a>
             <div className="dropdown-items">
-                {Children.toArray(props.children).map((content: any, index: number) => {
+                {Children.toArray(props.children).map((child: React.ReactNode, index: number) => {
                     return (
                         <div key={`item-${index}`} className={`dropdown-item dropdown-item-${index}`}
                             onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}>
-                            { content }
+                            { child }
                         </div>
                     );
                 })}

@@ -9,7 +9,7 @@ Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-syste
 
 ## Demo
 
-https://phoenixreisen.github.io/reacts/banners/
+http://design-system.phoenixreisen.net/section-200.html
 
 ## Installation
 
@@ -22,8 +22,8 @@ npm install --save @phoenixreisen/reacts
 ## Anwendung
 
 ```js
-import Linkbanner from '@phoenixreisen/reacts/banners/link.m';
-import Sharebanner from '@phoenixreisen/reacts/banners/share.m';
+import Linkbanner from '@phoenixreisen/reacts/banners/link.r';
+import Sharebanner from '@phoenixreisen/reacts/banners/share.r';
 
 // Import aller vorhandenen Banner
 // (nur zu empfehlen, wenn auch alle benutzt werden)
@@ -58,7 +58,9 @@ import * as Banners from '@phoenixreisen/reacts/banners';
 
 ## Kompilat Demo für Github Page
 
-Mit folgendem Befehl werden alle Demos gebaut. Möchte man nur bestimmte Demos bauen, kann man in der [rollup.config.js](../../rollup.config.js) nicht benötigte Demos auskommentieren, sollte sie vor dem `push` aber wieder einkommentieren.
+Mit folgendem Befehl werden alle Demos in den Ordner [../../docs](../../docs) gebaut. Dieser Ordner wird von Github zur Bereitstellung der Demos bzw. Github Pages genutzt.
+
+Möchte man zum Entwickeln nur bestimmte Demos bauen, kann man in der [rollup.config.js](../../rollup.config.js) nicht benötigte Demos auskommentieren, sollte sie vor dem `push` aber wieder einkommentieren.
 
 ```bash
 npm run compile:demos

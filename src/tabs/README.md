@@ -29,7 +29,9 @@ import Tabs from '@phoenixreisen/reacts/tabs';
 
 ## Demo für Github Page
 
-Mit folgendem Befehl werden alle Demos gebaut. Möchte man nur bestimmte Demos bauen, kann man in der [rollup.config.js](../../rollup.config.js) nicht benötigte Demos auskommentieren, sollte sie vor dem `push` aber wieder einkommentieren.
+Mit folgendem Befehl werden alle Demos in den Ordner [../../docs](../../docs) gebaut. Dieser Ordner wird von Github zur Bereitstellung der Demos bzw. Github Pages genutzt.
+
+Möchte man zum Entwickeln nur bestimmte Demos bauen, kann man in der [rollup.config.js](../../rollup.config.js) nicht benötigte Demos auskommentieren, sollte sie vor dem `push` aber wieder einkommentieren.
 
 ```bash
 npm run compile:demos
@@ -45,4 +47,3 @@ npm run test:tabs
 ## Deployment
 
 Deployed & published wird immer die ganze Sammlung. [Siehe hier](../../README.md).
-https://phoenixreisen.github.io/notification/

@@ -4,6 +4,7 @@
   "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run compile:demos",
     "compile:demos": "rm -rf ./docs/* && npx rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

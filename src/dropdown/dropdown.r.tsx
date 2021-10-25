@@ -16,7 +16,7 @@ export const Dropdown = (props:Props) => {
     const {title, icon, cssclass} = props;
     const [isOpen, setIsOpen] = useState(false);
 
-    const closeOnEsc = (e: KeyboardEvent) => {
+    const closeOnEsc = (e:KeyboardEvent) => {
         (e?.keyCode === 27) && setIsOpen(false);
     };
 
@@ -25,12 +25,15 @@ export const Dropdown = (props:Props) => {
     }, [props.isOpen]);
 
     useEffect(() => {
-        document.body.addEventListener('keydown', e => closeOnEsc(e));
+        document.body.addEventListener('keydown', closeOnEsc);
+        return () => {
+            document.body.removeEventListener('keydown', closeOnEsc);
+        }
     }, []);
 
     return(
         <article className={`dropdown ${isOpen ? 'dropdown--open':''} ${cssclass || ''}`}>
-            <a href="#" onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}>
+            <a href="#" onClick={(e) => { e?.preventDefault(); setIsOpen(!isOpen); }}>
                 {icon ? <i className={`fas ${icon} mr1`} aria-hidden="true"></i> : ''} {title || ''}
             </a>
             <div className="dropdown-items">

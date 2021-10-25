@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown should render correctly 1`] = `
+<article
+  className="dropdown  "
+>
+  <a
+    href="#"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="fas fa-user mr1"
+    />
+     
+    Awesome Dropdown
+  </a>
+  <div
+    className="dropdown-items"
+  >
+    <div
+      className="dropdown-item dropdown-item-0"
+      onClick={[Function]}
+    >
+      <div>
+        Element 1
+      </div>
+    </div>
+    <div
+      className="dropdown-item dropdown-item-1"
+      onClick={[Function]}
+    >
+      <div>
+        Element 2
+      </div>
+    </div>
+    <div
+      className="dropdown-item dropdown-item-2"
+      onClick={[Function]}
+    >
+      <div>
+        Element 3
+      </div>
+    </div>
+  </div>
+</article>
+`;

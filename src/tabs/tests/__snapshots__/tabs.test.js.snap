@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should render correctly 1`] = `
+<article
+  className="tabs"
+>
+  <div
+    className="tabs__tabs-bar"
+  >
+    <a
+      className="tab tab-0 tab--link is-active-tab"
+      href="#"
+      onClick={[Function]}
+    >
+      Tab I
+    </a>
+    <a
+      className="tab tab-1 tab--link is-inactive-tab"
+      href="#"
+      onClick={[Function]}
+    >
+      Tab II
+    </a>
+  </div>
+  <div
+    className="tabs__tabs-content"
+  >
+    <div
+      className="tab-content tab-content-0 is-visible-tab"
+    >
+      <div>
+        Tab I
+      </div>
+    </div>
+    <div
+      className="tab-content tab-content-1 is-hidden-tab"
+    >
+      <div>
+        Tab II
+      </div>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`Tabs should render single tab not as link 1`] = `
+<article
+  className="tabs"
+>
+  <div
+    className="tabs__tabs-bar"
+  >
+    <a
+      className="tab tab-0  is-active-tab"
+      href="#"
+      onClick={[Function]}
+    >
+      One & Only
+    </a>
+  </div>
+  <div
+    className="tabs__tabs-content"
+  >
+    <div
+      className="tab-content tab-content-0 is-visible-tab"
+    >
+      <div>
+        One & Only
+      </div>
+    </div>
+  </div>
+</article>
+`;

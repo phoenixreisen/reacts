@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly without params 1`] = `
+<article
+  className="header"
+>
+  <a
+    href="http//www.phoenixreisen.com"
+    target="_self"
+    title=""
+  >
+    <picture
+      className="header__logo"
+    >
+      <img
+        src="IMGPATH"
+      />
+    </picture>
+  </a>
+  
+  
+</article>
+`;
+
+exports[`Header should show version when given 1`] = `
+<article
+  className="header"
+>
+  <a
+    href="http//www.phoenixreisen.com"
+    target="_self"
+    title=""
+  >
+    <picture
+      className="header__logo"
+    >
+      <img
+        src="IMGPATH"
+      />
+    </picture>
+  </a>
+  <div
+    className="header__version"
+  >
+    1.0.0
+  </div>
+  
+</article>
+`;
+
+exports[`Header should use given params correctly 1`] = `
+<article
+  className="header"
+>
+  <a
+    href="https://www.test.url.com"
+    target="_self"
+    title=""
+  >
+    <picture
+      className="header__logo"
+    >
+      <img
+        src="IMGPATH"
+      />
+    </picture>
+  </a>
+  
+  <div
+    className="header__nav-btn"
+  >
+    <a
+      className="nav-btn noprint"
+      href="#"
+      onClick={[Function]}
+      title="Navigation ein- & ausblenden"
+    >
+      <i
+        className="fas fa-bars"
+      />
+    </a>
+  </div>
+</article>
+`;

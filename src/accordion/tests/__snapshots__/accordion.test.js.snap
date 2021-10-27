@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Akkordion should render correctly 1`] = `
+<section
+  className="accordion"
+>
+  <article
+    className="acc-item  acc-primary"
+    id="acc-item-0"
+  >
+    <a
+      className="acc-opener "
+      href="#"
+      onClick={[Function]}
+    >
+      <span>
+        <i
+          className="fas fa-fa-user-1 mr1"
+        />
+         
+        Headline 1
+      </span>
+      <i
+        className="fas fa-chevron-up ml1"
+      />
+    </a>
+    <div
+      className="acc-section"
+      style={
+        Object {
+          "maxHeight": "0px",
+        }
+      }
+    >
+      <div
+        className="acc-inner"
+      >
+        <div>
+          Hallo 1
+        </div>
+      </div>
+    </div>
+  </article>
+  <article
+    className="acc-item  acc-secondary"
+    id="acc-item-1"
+  >
+    <a
+      className="acc-opener acc-opener--grayed"
+      href="#"
+      onClick={[Function]}
+    >
+      <span>
+        <i
+          className="fas fa-fa-user-2 mr1"
+        />
+         
+        Headline 2
+      </span>
+      <i
+        className="fas fa-chevron-up ml1"
+      />
+    </a>
+    <div
+      className="acc-section"
+      style={
+        Object {
+          "maxHeight": "0px",
+        }
+      }
+    >
+      <div
+        className="acc-inner"
+      >
+        <div>
+          Hallo 2
+        </div>
+      </div>
+    </div>
+  </article>
+  <article
+    className="acc-item  acc-secondary"
+    id="acc-item-2"
+  >
+    <a
+      className="acc-opener acc-opener--grayed"
+      href="#"
+      onClick={[Function]}
+    >
+      <span>
+        <i
+          className="fas fa-fa-user-3 mr1"
+        />
+         
+        Headline 3
+      </span>
+      <i
+        className="fas fa-chevron-up ml1"
+      />
+    </a>
+    <div
+      className="acc-section"
+      style={
+        Object {
+          "maxHeight": "0px",
+        }
+      }
+    >
+      <div
+        className="acc-inner"
+      >
+        <div>
+          Hallo 3
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+`;

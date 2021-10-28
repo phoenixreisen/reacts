@@ -13,10 +13,10 @@ const demos = [
     'footer',
     'loader',
     'slider',
+    'banners',
     'dropdown',
     'accordion',
     'notification',
-    // 'banners',
 ].map(current => {
     return {
         input: `./src/${current}/docs/index.tsx`,

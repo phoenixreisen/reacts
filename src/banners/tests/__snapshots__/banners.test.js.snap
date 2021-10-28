@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Banner should render correctly 1`] = `
+<article
+  className="link-banner mv5"
+>
+  <div
+    className="link-banner__textbox"
+  >
+    <p>
+      Hallo
+    </p>
+    <p
+      className="pb0"
+    >
+      <a
+        href="https://www.phoenixreisen.com"
+      >
+        <i
+          className="fas fa-angle-right"
+        />
+         
+        Phoenix Reisen
+      </a>
+    </p>
+  </div>
+</article>
+`;
+
+exports[`Share Banner should render correctly without params 1`] = `
+<article
+  className="share-banner "
+>
+  <div
+    className="wrapper wrapper--large"
+  >
+    <div
+      className="tc"
+    >
+      <h3
+        className="tc pt0"
+      >
+        Gerne weitersagen...
+      </h3>
+    </div>
+    <div
+      className="tc share-icons"
+    >
+      <a
+        className="share-email"
+        href="mailto:?subject=tolle Empfehlung&body=: http://localhost/"
+        title=" per Email empfehlen"
+      >
+        <i
+          className="fas fa-envelope"
+        />
+      </a>
+      <a
+        className="share-whatsapp"
+        href="https://api.whatsapp.com/send?text=: http://localhost/"
+        title=" per WhatsApp empfehlen"
+      >
+        <i
+          className="fab fa-whatsapp"
+        />
+      </a>
+      <a
+        className="share-twitter"
+        href="https://twitter.com/intent/tweet?text=&url=http://localhost/&hashtags=undefined"
+        title=" twittern"
+      >
+        <i
+          className="fab fa-twitter"
+        />
+      </a>
+      <a
+        className="share-facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title=" per Facebook empfehlen"
+      >
+        <i
+          className="fab fa-facebook-f"
+        />
+      </a>
+      <a
+        className="share-clipboard share-clipboard"
+        data-clipboard-text=": http://localhost/"
+        href="#"
+        onClick={[Function]}
+        title="in die Zwischenablage kopieren"
+      >
+        <i
+          className="fas fa-clipboard"
+        />
+      </a>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`Share Banner should use given params correctly 1`] = `
+<article
+  className="share-banner "
+>
+  <div
+    className="wrapper wrapper--large"
+  >
+    <div
+      className="tc"
+    >
+      <h3
+        className="tc pt0"
+      >
+        Sie finden uns auch auf
+      </h3>
+    </div>
+    <div
+      className="tc share-icons"
+    >
+      <a
+        className="share-email"
+        href="mailto:?subject=Mail Subject&body=Tolle Reisen mit dem Schiff: http://localhost/"
+        title="Phoenix Reisen per Email empfehlen"
+      >
+        <i
+          className="fas fa-envelope"
+        />
+      </a>
+      <a
+        className="share-whatsapp"
+        href="https://api.whatsapp.com/send?text=Tolle Reisen mit dem Schiff: http://localhost/"
+        title="Phoenix Reisen per WhatsApp empfehlen"
+      >
+        <i
+          className="fab fa-whatsapp"
+        />
+      </a>
+      <a
+        className="share-twitter"
+        href="https://twitter.com/intent/tweet?text=Tolle Reisen mit dem Schiff&url=http://localhost/&hashtags=Phoenix, Reisen, Kreuzfahrten"
+        title="Phoenix Reisen twittern"
+      >
+        <i
+          className="fab fa-twitter"
+        />
+      </a>
+      <a
+        className="share-facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Phoenix Reisen per Facebook empfehlen"
+      >
+        <i
+          className="fab fa-facebook-f"
+        />
+      </a>
+      <a
+        className="share-clipboard share-clipboard"
+        data-clipboard-text="Tolle Reisen mit dem Schiff: http://localhost/"
+        href="#"
+        onClick={[Function]}
+        title="in die Zwischenablage kopieren"
+      >
+        <i
+          className="fas fa-clipboard"
+        />
+      </a>
+    </div>
+  </div>
+</article>
+`;

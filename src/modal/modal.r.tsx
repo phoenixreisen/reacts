@@ -6,8 +6,8 @@ import Sizes from './modal.sizes';
 type Props = {
     size?: Sizes,
     title: string,
-    footer?: unknown,
-    content?: unknown,
+    footer?: React.ReactNode,
+    content: React.ReactNode,
     withCloseText?: boolean,
     toggle?: (e?) => void
 }
@@ -18,12 +18,20 @@ export const Modal: FunctionComponent<Props> = (props) => {
     const { size, content, children, toggle } = props;
 
     useEffect(() => {
-        document.addEventListener('keydown', (e: KeyboardEvent) => {
+        if(!content && !React.Children.count(children)) {
+            throw 'Modal without Content?';
+        } else if(size && ![...Object.values(Sizes)].includes(size)) {
+            throw 'Unknown size value given';
+        }
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener('keydown', (e:KeyboardEvent) => {
             if(e.keyCode === 27) {
                 toggle?.();
             }
         });
-    }, [children, content, size, toggle]);
+    }, []);
 
     useEffect(() => {
         const $body = document.querySelector('body') as HTMLElement;
@@ -42,7 +50,7 @@ export const Modal: FunctionComponent<Props> = (props) => {
         <article className={`modal modal--visible ${props.size || ''}`}>
             <div className="modal__header">
                 <span className="modal__headline">
-                    {props.title || ''}
+                    { props.title || '' }
                 </span>
                 {props.toggle &&
                     <a className="modal__toggle" href="#" onClick={props.toggle}>
@@ -62,11 +70,11 @@ export const Modal: FunctionComponent<Props> = (props) => {
 
             {props.footer &&
                 <div className="modal__footer tr">
-                    {props.footer}
+                    { props.footer }
                 </div>
             }
         </article>,
-        <article className="modal__bg"></article>,
+        <article className="modal__bg" />,
     </>);
 };
 

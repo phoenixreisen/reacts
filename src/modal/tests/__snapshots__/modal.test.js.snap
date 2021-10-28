@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render correctly 1`] = `
+Array [
+  <article
+    className="modal modal--visible "
+  >
+    <div
+      className="modal__header"
+    >
+      <span
+        className="modal__headline"
+      >
+        Awesome Modal
+      </span>
+      <a
+        className="modal__toggle"
+        href="#"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-times-circle"
+        />
+      </a>
+    </div>
+    <div
+      className="modal__content"
+    >
+      <div>
+        Content
+      </div>
+    </div>
+    <div
+      className="modal__footer tr"
+    >
+      <div>
+        <button>
+          Schließen
+        </button>
+      </div>
+    </div>
+  </article>,
+  ",",
+  <article
+    className="modal__bg"
+  />,
+  ",",
+]
+`;

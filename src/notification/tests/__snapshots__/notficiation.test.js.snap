@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification should render error correctly 1`] = `
+<article
+  className="notification notification--error"
+>
+  <i
+    className="fas fa-null"
+  />
+  <span>
+    WTF?! Ein Error!
+  </span>
+  <a
+    className="fas fa-times"
+    href="#"
+    onClick={[Function]}
+  />
+</article>
+`;
+
+exports[`Notification should render info correctly 1`] = `
+<article
+  className="notification notification--normal"
+>
+  <i
+    className="fas fa-info-circle"
+  />
+  <span>
+    Ich bin ein Bibabutzemann!
+  </span>
+  <a
+    className="fas fa-times"
+    href="#"
+    onClick={[Function]}
+  />
+</article>
+`;
+
+exports[`Notification should render success correctly 1`] = `
+<article
+  className="notification notification--success"
+>
+  <i
+    className="fas fa-null"
+  />
+  <span>
+    Erfolgreich gespeichert
+  </span>
+  <a
+    className="fas fa-times"
+    href="#"
+    onClick={[Function]}
+  />
+</article>
+`;

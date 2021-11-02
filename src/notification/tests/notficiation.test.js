@@ -8,7 +8,7 @@ import Notification from '../notification.r';
 import renderer from 'react-test-renderer';
 import React from 'react';
 
-describe('Notification should', () => {
+describe('Notification/s should', () => {
 
     test('render success correctly', () => {
         const state = { show: true };
@@ -62,8 +62,7 @@ describe('Notification should', () => {
         console.error = out;
     });
 
-    test('render a list of notifications', () => {
-
+    test('be able to render a list of notifications', () => {
         notes().push({ text: "Note 3", status: STATUS.error });
         notes().push({ text: "Note 1", status: STATUS.normal });
         notes().push({ text: "Note 2", status: STATUS.success });

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider should render correctly 1`] = `
+<div>
+  <div
+    className="swiper"
+  >
+    <div
+      className="swiper-wrapper"
+    >
+      <div
+        className="swiper-slide"
+      >
+        <div
+          className="slide"
+        >
+          Slide Content
+        </div>
+      </div>
+      <div
+        className="swiper-slide"
+      >
+        <div
+          className="slide"
+        >
+          Slide Content
+        </div>
+      </div>
+      <div
+        className="swiper-slide"
+      >
+        <div
+          className="slide"
+        >
+          Slide Content
+        </div>
+      </div>
+    </div>
+    <div
+      className="swiper-scrollbar"
+    />
+    <div
+      className="swiper-button-prev"
+    >
+      <i
+        className="fas fa-arrow-circle-left"
+      />
+    </div>
+    <div
+      className="swiper-button-next"
+    >
+      <i
+        className="fas fa-arrow-circle-right"
+      />
+    </div>
+    <div
+      className="swiper-pagination"
+    />
+  </div>
+</div>
+`;

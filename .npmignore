@@ -4,6 +4,8 @@
 .tsconfig.json
 package-lock.json
 test-setup.ts
+rollup.config.js
+babel.config.js
 
 .hg/
 .git/

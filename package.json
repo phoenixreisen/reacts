@@ -1,12 +1,12 @@
 {
   "name": "@phoenixreisen/reacts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "test:update": "jest --updateSnapshot",
-    "prepublish": "npm run compile:demos",
+    "prepublish": "npm test && npm run compile:demos",
     "compile:demos": "rm -rf ./docs/* && npx rollup -c",
     "_compile:scss": "npx sass --no-source-map ./src:./dist",
     "_compile:ts": "npx tsc --declaration && npx tsc --build tsconfig.json",
@@ -58,7 +58,7 @@
     "gh-pages": "^3.1.0",
     "ignore-styles": "^5.0.1",
     "jest": "^27.2.5",
-    "jsdom": "^16.4.0",
+    "jsdom": "^18.0.1",
     "react-test-renderer": "^17.0.2",
     "regenerator-runtime": "^0.13.9",
     "rollup": "^2.38.5",
@@ -75,6 +75,9 @@
       "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/mocks/files.js",
       "\\.(css|scss|less)$": "<rootDir>/tests/mocks/files.js",
       "(swiper/css)": "<rootDir>/tests/mocks/css.js"
-    }
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/?!(swiper)"
+    ]
   }
 }

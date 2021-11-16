@@ -29,9 +29,7 @@ const demos = [
         plugins: [
             scss(),
             css(),
-            typescript({
-                sourceMap: true
-            }),
+            typescript(),
             commonjs(),
             resolve(),
             url({

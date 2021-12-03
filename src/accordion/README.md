@@ -93,7 +93,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:accordion
+npm run test
 ```
 
 ## Deployment

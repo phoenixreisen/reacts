@@ -41,7 +41,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:tabs
+npm run test
 ```
 
 ## Deployment

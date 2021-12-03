@@ -66,10 +66,9 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:notifications
+npm run test
 ```
 
 ## Deployment
 
 Deployed & published wird immer die ganze Sammlung. [Siehe hier](../../README.md).
-https://phoenixreisen.github.io/notification/

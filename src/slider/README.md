@@ -77,7 +77,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:slider
+npm run test
 ```
 
 ## Deployment

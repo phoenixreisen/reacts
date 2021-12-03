@@ -42,7 +42,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:header
+npm run test
 ```
 
 ## Deployment

@@ -50,7 +50,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:dropdown
+npm run test
 ```
 
 ## Deployment

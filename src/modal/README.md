@@ -19,7 +19,7 @@ npm install --save @phoenixreisen/reacts
 ## Anwendung
 
 ```tsx
-import Modal from '@phoenixreisen/modal';
+import Modal from '@phoenixreisen/reacts/modal';
 ```
 
 Das Modal selbst kümmert sich **nicht** um seinen Geöffnet-/Geschlossen-Status. Das muss außerhalb entschieden werden, indem eine Statusvariable dafür sorgt, ob das Modal gerendert wird oder nicht.
@@ -55,7 +55,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
-npm run test:modal
+npm run test
 ```
 
 ## Deployment

@@ -23,16 +23,16 @@ Nach einem Benutzerereignis (z.B. Speichern oder Löschen) wird ein Notification
 `Notifications` iteriert über die Liste und rendert entsprechend oft die `Notification`-Komponente mit den jeweiligen Objektdaten. Danach, nach ca. 5 Sekunden, ruft `Notification` die als Parameter übergebene `toggle()`-Funktion auf, die dafür sorgt, dass das jeweilige Notification-Objekt aus der Liste gelöscht wird.
 
 ```tsx
-import Notifications, { notes } from '@phoenixreisen/reacts/notifications';
+import Notifications, { notify } from '@phoenixreisen/reacts/src/notifications';
 
 const ExampleView = () => {
 
     const submit = () => {
         Promise.resolve('saved!').then(() => {
-            notes([...notes(), {
+            notify({
                 status: 'success',
                 text: 'Erfolgreich gespeichert!',
-            }]);
+            });
         });
     };
 

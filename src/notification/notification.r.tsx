@@ -1,4 +1,4 @@
-import { NoteProps, STATUS, ICONS, SHOWTIMER } from './notification.settings';
+import { NoteProps, STATUS, ICONS, SHOWTIMER } from './notification.api';
 import React, { useEffect, useState } from 'react';
 
 //--- Ausgabe einer Notification -----

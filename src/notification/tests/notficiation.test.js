@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import {render, fireEvent, waitFor, screen, getByText} from '@testing-library/react';
-import { STATUS, notes } from '../notification.settings';
+import { STATUS, notify } from '../notification.api';
 import Notifications from '../notifications.r';
 import Notification from '../notification.r';
 import renderer from 'react-test-renderer';
@@ -63,9 +63,9 @@ describe('Notification/s should', () => {
     });
 
     test('be able to render a list of notifications', () => {
-        notes().push({ text: "Note 3", status: STATUS.error });
-        notes().push({ text: "Note 1", status: STATUS.normal });
-        notes().push({ text: "Note 2", status: STATUS.success });
+        notify({ text: "Note 3", status: STATUS.error });
+        notify({ text: "Note 1", status: STATUS.normal });
+        notify({ text: "Note 2", status: STATUS.success });
 
         const comp = render(<Notifications />);
 

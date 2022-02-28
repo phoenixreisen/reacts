@@ -1,5 +1,5 @@
-import { notes } from '../notification/notification.settings';
 import React, { useState, useEffect } from 'react';
+import { notify } from '../notification';
 import ClipboardJS from 'clipboard';
 
 //--- Types ------
@@ -24,7 +24,7 @@ export const Sharebanner = (props:Props) => {
     function saveToClipboard() {
         setShowClipboardMsg(true);
         setTimeout(() => setShowClipboardMsg(false), 2500);
-        notes([...notes(), {text: 'In die Zwischenablage kopiert.'}]);
+        notify({text: 'In die Zwischenablage kopiert.'});
     }
 
     useEffect(() => {

@@ -1,4 +1,4 @@
-import { NoteObject, notes } from './notification.settings';
+import { notify, notes, onNoteListChange, NoteObject } from './notification.api';
 import React, { useEffect, useState } from 'react';
 import { Notification } from './notification.r';
 
@@ -8,17 +8,17 @@ export const Notifications = () => {
     const [rerender, setRerender] = useState<number>(0);
 
     useEffect(() => {
-        notes.map(() => setRerender(notes().length));
+        onNoteListChange.add(() => setRerender(notes.size));
     }, [rerender]);
 
     return (
         <React.Fragment>
-            {notes().map?.((note:NoteObject, index:number) =>
+            {Array.from(notes).map?.((note:NoteObject, index:number) =>
                 <Notification
                     key={index}
                     text={note.text}
                     status={note.status}
-                    toggle={() => notes(notes().filter(current => current !== note))}
+                    toggle={() => notify(note, 'del')}
                 />,
             )}
         </React.Fragment>

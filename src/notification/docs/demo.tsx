@@ -1,15 +1,14 @@
-import { notes, STATUS } from '../notification.settings';
-import Notifications from '../notifications.r';
 import { Link } from 'react-router-dom';
+import Notifications, { notify, STATUS } from '..';
 import React from 'react';
 
 //--- Variablen, Nodes & Konstanten -----
 
 const msg = (status: STATUS) => {
-    return notes([...notes(), {
+    return notify({
         text: 'Gut geklickt, Brudi!',
         status: status
-    }]);
+    });
 };
 
 //--- Komponente -----

@@ -14,6 +14,7 @@ const demos = [
     'loader',
     'slider',
     'banners',
+    'tooltip',
     'dropdown',
     'accordion',
     'notification',

@@ -13,7 +13,7 @@ https://phoenixreisen.github.io/reacts/tooltip/
 [React](https://reactjs.org/) wird benötigt.
 
 ```bash
-npm install --save @phoenixreisen/reacts/tooltip
+npm install --save @phoenixreisen/reacts
 ```
 
 ## Anwendung

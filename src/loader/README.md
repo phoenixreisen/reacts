@@ -13,7 +13,7 @@ https://phoenixreisen.github.io/reacts/loader/
 [React](https://reactjs.org/) wird benötigt.
 
 ```bash
-npm install --save @phoenixreisen/reacts/loader
+npm install --save @phoenixreisen/reacts
 ```
 
 ## Anwendung

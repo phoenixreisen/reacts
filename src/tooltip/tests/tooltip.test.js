@@ -4,7 +4,7 @@
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Content } from '../docs/demo'; 
-import Tooltip from '../tooltip';
+import Tooltip from '../tooltip.r';
 import React from "react";
 
 describe('Tooltip should', () => {

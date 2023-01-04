@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/reacts",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
   "type": "module",
   "scripts": {

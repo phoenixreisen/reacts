@@ -27,7 +27,7 @@ exports[`Akkordion should render correctly 1`] = `
     <div
       className="acc-section"
       style={
-        Object {
+        {
           "maxHeight": "0px",
         }
       }
@@ -64,7 +64,7 @@ exports[`Akkordion should render correctly 1`] = `
     <div
       className="acc-section"
       style={
-        Object {
+        {
           "maxHeight": "0px",
         }
       }
@@ -101,7 +101,7 @@ exports[`Akkordion should render correctly 1`] = `
     <div
       className="acc-section"
       style={
-        Object {
+        {
           "maxHeight": "0px",
         }
       }

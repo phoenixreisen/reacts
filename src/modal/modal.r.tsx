@@ -7,7 +7,8 @@ type Props = {
     size?: Sizes,
     title: string,
     footer?: React.ReactNode,
-    content: React.ReactNode,
+    content?: React.ReactNode,
+    children?: React.ReactNode,
     withCloseText?: boolean,
     toggle?: (e?) => void
 }

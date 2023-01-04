@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import Loader from '..';
 
 export const Root = () => <Loader text="Demo wird geladen..." />;
 
-ReactDOM.render(
+createRoot(document.querySelector('.example-app')).render(
     <Router>
-        <Switch>
-            <Route path="/" render={() => <Root />} />
-        </Switch>
-    </Router>,
-    document.querySelector('.example-app'),
+        <Routes>
+            <Route path="*" element={<Root />} />
+        </Routes>
+    </Router>
 );

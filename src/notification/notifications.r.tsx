@@ -1,6 +1,6 @@
 import { notify, notes, onNoteListChange, NoteObject } from './notification.api';
 import React, { useEffect, useState } from 'react';
-import { Notification } from './notification.r';
+import Notification from './notification.r';
 
 //--- Ausgabe aller Notifications -----
 

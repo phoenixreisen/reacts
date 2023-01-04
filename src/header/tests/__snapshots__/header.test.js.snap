@@ -17,8 +17,6 @@ exports[`Header should render correctly without params 1`] = `
       />
     </picture>
   </a>
-  
-  
 </article>
 `;
 
@@ -44,7 +42,6 @@ exports[`Header should show version when given 1`] = `
   >
     1.0.0
   </div>
-  
 </article>
 `;
 
@@ -65,7 +62,6 @@ exports[`Header should use given params correctly 1`] = `
       />
     </picture>
   </a>
-  
   <div
     className="header__nav-btn"
   >

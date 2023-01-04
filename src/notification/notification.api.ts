@@ -2,13 +2,13 @@
 
 export interface NoteObject {
     status?: STATUS,
-    text: string | Element | JSX.Element | React.Component
+    text: string
 }
 
 export interface NoteProps {
     status?: STATUS,
     toggle: () => void,
-    text: string | Element | JSX.Element | React.Component
+    text: string
 }
 
 

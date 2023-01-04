@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip should also handle on click instead of hover 1`] = `
-Array [
+[
   <article
     className="tooltip tooltip--click"
     onClick={[Function]}
@@ -128,7 +128,7 @@ exports[`Tooltip should have some default classes 1`] = `
 `;
 
 exports[`Tooltip should render colors 1`] = `
-Array [
+[
   <article
     className="tooltip "
     onMouseEnter={[Function]}
@@ -213,7 +213,7 @@ Array [
 `;
 
 exports[`Tooltip should render positions 1`] = `
-Array [
+[
   <article
     className="tooltip "
     onMouseEnter={[Function]}

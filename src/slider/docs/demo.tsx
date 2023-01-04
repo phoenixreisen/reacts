@@ -4,7 +4,7 @@ import React from 'react';
 export const Demo = ()  => {
 
     return (
-        <Slider>
+        <Slider name="test">
             <div className="pa3">
                 <div>TEST REACT KOMPONENTE</div>
                 <div>TEST REACT KOMPONENTE</div>

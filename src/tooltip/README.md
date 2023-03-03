@@ -24,12 +24,13 @@ import Tooltip from '@phoenixreisen/reacts/tooltip';
 // API
 
 <Tooltip 
-    eveng="hover"                   // hover, click
+    event="hover"                   // hover, click
     color="success"                 // info, success, warning, danger
     position="left"                 // above, below, left, right
     text="Hover mich!"              // Freitext
+    iconname="fa-home"              // Fontawesome Iconname
     tooltip="Ich bin der Tooltip!"  // entweder Text (nicht zu lang)
-    TipComponent={<Content />}      // oder React Komponente
+    TipComponent={ <Content /> }    // oder React Komponente
 />
 ```
 

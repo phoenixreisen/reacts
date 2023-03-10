@@ -35,7 +35,7 @@ export const Tooltip = (props: Props) => {
                 onMouseEnter={ !event || event === 'hover' ? () => setShowTip(true) : undefined }
                 onMouseLeave={ !event || event === 'hover' ? () => setShowTip(false) : undefined }
             >
-                { iconname?.length && <i className={`tooltip-icon fas ${iconname} ${text?.length ? 'mr2':''}`} /> }
+                { iconname?.length && <i className={`tooltip-icon fas ${iconname} ${text?.length ? 'mr1':''}`} /> }
                 { text?.length && <span className={'tooltip-text'}>{ text }</span> }
     
                 <span className={`tip ${!!TipComponent ? 'tip--component':''} ${!!position ? `tip--${position}`:'tip--below'} ${showTip ? 'tip--visible':'tip--hidden'}`}>

@@ -9,7 +9,9 @@ type AttrProps = {
     faviconUrl?: string,
     faviconTarget?: string,
     toggleNav?: (e?: any) => void,
-    toggleAvatar?: (e?: any) => void
+    toggleAvatar?: (e?: any) => void,
+    AvatarComponent?: React.ReactNode,
+    NavComponent?: React.ReactNode
 }
 
 //--- Funktionen -----
@@ -33,8 +35,8 @@ const _checkPosition = ({$header, isVisible, setIsVisible}) => {
 //--- View -----
 
 export const Topbar = (props: AttrProps) => {
-    const [$header, setHeader] = useState<HTMLElement>(null);
-    const [isVisible, setIsVisible] = useState<boolean>(false);
+    const [ $header, setHeader ] = useState<HTMLElement>(null);
+    const [ isVisible, setIsVisible ] = useState<boolean>(false);
 
     useEffect(() => {
         setHeader(document.querySelector('.header') as HTMLElement || null);
@@ -65,15 +67,23 @@ export const Topbar = (props: AttrProps) => {
                             onClick={(e) => props.toggleAvatar(e)}>
                             <i className="fas fa-user avatar__symbol"></i>
                         </Link>
+                        {!!props.AvatarComponent && (
+                            props.AvatarComponent
+                        )}
                     </article>
                     : ''}
 
                 {props.toggleNav ?
-                    <Link to="#" className="nav-btn top-bar__nav-btn noprint"
-                        title="Navigation ein-/ausblenden"
-                        onClick={(e) => props.toggleNav(e)}>
-                        <i className="fas fa-bars"></i>
-                    </Link>
+                    <article className="top-bar__nav-btn noprint">
+                        <Link to="#" className="nav-btn"
+                            title="Navigation ein-/ausblenden"
+                            onClick={(e) => props.toggleNav(e)}>
+                            <i className="fas fa-bars"></i>
+                        </Link>
+                        {!!props.NavComponent && (
+                            props.NavComponent
+                        )}
+                    </article>
                     : ''}
             </div>
         </article>

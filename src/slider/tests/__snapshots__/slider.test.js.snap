@@ -37,24 +37,24 @@ exports[`Slider should render correctly 1`] = `
       </div>
     </div>
     <div
-      className="swiper-scrollbar"
+      className="swiper-scrollbar swiper-scrollbar-test-slider"
     />
     <div
-      className="swiper-button-prev"
+      className="swiper-button-prev swiper-button-prev-test-slider"
     >
       <i
         className="fas fa-arrow-circle-left"
       />
     </div>
     <div
-      className="swiper-button-next"
+      className="swiper-button-next swiper-button-next-test-slider"
     >
       <i
         className="fas fa-arrow-circle-right"
       />
     </div>
     <div
-      className="swiper-pagination"
+      className="swiper-pagination swiper-pagination-test-slider"
     />
   </div>
 </div>

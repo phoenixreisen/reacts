@@ -17,7 +17,7 @@ describe('Slider should', () => {
     test('render correctly', () => {
         const page = (
             <div>
-                <Slider>
+                <Slider name="test-slider">
                     <Slide />
                     <Slide />
                     <Slide />

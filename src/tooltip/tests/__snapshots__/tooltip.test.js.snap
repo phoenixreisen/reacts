@@ -14,11 +14,7 @@ exports[`Tooltip should also handle on click instead of hover 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className=""
-      >
-        Hinweis grüm!
-      </span>
+      Hinweis grün!
     </span>
   </article>,
   <article
@@ -31,7 +27,7 @@ exports[`Tooltip should also handle on click instead of hover 1`] = `
       Tooltip
     </span>
     <span
-      className="tip tip--component tip--below tip--hidden"
+      className="tip  tip--below tip--hidden"
     >
       <article
         className="pa3 gray6 c-gray1"
@@ -74,7 +70,7 @@ exports[`Tooltip should also render React Components as tooltip 1`] = `
     Ich bin ein Tooltip
   </span>
   <span
-    className="tip tip--component tip--below tip--hidden"
+    className="tip  tip--below tip--hidden"
   >
     <article
       className="pa3 gray6 c-gray1"
@@ -118,11 +114,7 @@ exports[`Tooltip should have some default classes 1`] = `
   <span
     className="tip  tip--below tip--hidden"
   >
-    <span
-      className=""
-    >
-      Hinweis!
-    </span>
+    Hinweis!
   </span>
 </article>
 `;
@@ -142,11 +134,7 @@ exports[`Tooltip should render colors 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className="tip--colored danger"
-      >
-        Hinweis grüm!
-      </span>
+      Hinweis grüm!
     </span>
   </article>,
   <article
@@ -162,11 +150,7 @@ exports[`Tooltip should render colors 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className="tip--colored success"
-      >
-        Hinweis grüm!
-      </span>
+      Hinweis grüm!
     </span>
   </article>,
   <article
@@ -182,11 +166,7 @@ exports[`Tooltip should render colors 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className="tip--colored warning"
-      >
-        Hinweis grüm!
-      </span>
+      Hinweis grüm!
     </span>
   </article>,
   <article
@@ -202,11 +182,7 @@ exports[`Tooltip should render colors 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className="tip--colored info"
-      >
-        Hinweis grüm!
-      </span>
+      Hinweis grüm!
     </span>
   </article>,
 ]
@@ -227,11 +203,7 @@ exports[`Tooltip should render positions 1`] = `
     <span
       className="tip  tip--left tip--hidden"
     >
-      <span
-        className=""
-      >
-        Hinweis left!
-      </span>
+      Hinweis left!
     </span>
   </article>,
   <article
@@ -247,11 +219,7 @@ exports[`Tooltip should render positions 1`] = `
     <span
       className="tip  tip--right tip--hidden"
     >
-      <span
-        className=""
-      >
-        Hinweis rechts!
-      </span>
+      Hinweis rechts!
     </span>
   </article>,
   <article
@@ -267,11 +235,7 @@ exports[`Tooltip should render positions 1`] = `
     <span
       className="tip  tip--below tip--hidden"
     >
-      <span
-        className=""
-      >
-        Hinweis drunter!
-      </span>
+      Hinweis drunter!
     </span>
   </article>,
   <article
@@ -287,11 +251,7 @@ exports[`Tooltip should render positions 1`] = `
     <span
       className="tip  tip--above tip--hidden"
     >
-      <span
-        className=""
-      >
-        Hinweis drüber!
-      </span>
+      Hinweis drüber!
     </span>
   </article>,
 ]
@@ -303,22 +263,20 @@ exports[`Tooltip should render text with icon 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <i
-    className="tooltip-icon fas fas fa-blabla mr1"
-  />
   <span
     className="tooltip-text"
   >
-    How to live?!
+    <div>
+      <i
+        className="fas fa-blabla"
+      />
+       How to live?!
+    </div>
   </span>
   <span
     className="tip  tip--below tip--hidden"
   >
-    <span
-      className=""
-    >
-      WORK HARD, PLAY HARD
-    </span>
+    WORK HARD, PLAY HARD
   </span>
 </article>
 `;

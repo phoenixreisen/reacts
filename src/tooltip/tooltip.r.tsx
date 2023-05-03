@@ -3,13 +3,11 @@ import React, { useState } from 'react';
 //--- Types -----
 
 export interface Props {
-    text?: string,
-    tooltip?: string,
-    iconname?: string,
     event?: 'hover' | 'click',
+    type?: 'component' | 'text',
     position?: 'above' | 'right' | 'below' | 'left',
-    color?: 'success' | 'danger' | 'warning' | 'info',
-    TipComponent?: React.ReactNode,
+    TipComponent: React.ReactNode,
+    TextComponent: React.ReactNode,
 }
 
 //--- Component -----
@@ -17,17 +15,14 @@ export interface Props {
 export const Tooltip = (props: Props) => {
     const [ showTip, setShowTip ] = useState(false);
 
-    const { text, iconname } = props;           // Displayed base content
-    const { tooltip, TipComponent } = props;    // The tooltip on event
-    const { position, color, event } = props;   // Styling & behaviour
+    const { position, event, type } = props;
+    const { TextComponent, TipComponent } = props;
     
     try {
-        if(!text && !iconname) {
-            throw new Error('No content to display given. You have to set prop "text" and/or "iconname".');
-        } else if(!tooltip && !TipComponent) {
-            throw new Error('No tooltip to display given. You have to set prop "tooltip" or "TipComponent".');
-        } else if(tooltip && TipComponent) {
-            throw new Error('You cannot set both tooltip and TipCompoent.');
+        if(!TextComponent) {
+            throw new Error('No text given. You have to set prop "TextComponent" with a React component.');
+        } else if(!TipComponent) {
+            throw new Error('No tooltip given. You have to set prop "TipComponent" with a React component.');
         }
         return (
             <article className={`tooltip ${event === 'click' ? 'tooltip--click':''}`} 
@@ -35,18 +30,9 @@ export const Tooltip = (props: Props) => {
                 onMouseEnter={ !event || event === 'hover' ? () => setShowTip(true) : undefined }
                 onMouseLeave={ !event || event === 'hover' ? () => setShowTip(false) : undefined }
             >
-                { iconname?.length && <i className={`tooltip-icon fas ${iconname} ${text?.length ? 'mr1':''}`} /> }
-                { text?.length && <span className={'tooltip-text'}>{ text }</span> }
-    
-                <span className={`tip ${!!TipComponent ? 'tip--component':''} ${!!position ? `tip--${position}`:'tip--below'} ${showTip ? 'tip--visible':'tip--hidden'}`}>
-                    {!!TipComponent && 
-                        TipComponent
-                    }
-                    {!!tooltip && 
-                        <span className={color ? `tip--colored ${color}`:''}>
-                            { tooltip }
-                        </span>
-                    }
+                <span className={'tooltip-text'}>{ TextComponent }</span>
+                <span className={`tip ${type === 'component' ? 'tip--component':''} ${!!position ? `tip--${position}`:'tip--below'} ${showTip ? 'tip--visible':'tip--hidden'}`}>
+                    { TipComponent }
                 </span>
             </article>
         );

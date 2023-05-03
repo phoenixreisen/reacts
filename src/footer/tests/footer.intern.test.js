@@ -3,27 +3,24 @@
  */
  import { render, fireEvent, waitFor, screen } from '@testing-library/react';
  import renderer from 'react-test-renderer';
- import Footer from '../footer.r';
+ import Footer from '../footer.intern.r';
  import React from 'react';
 
  describe('footer should', () => {
 
-    test('render correctly without params', () => {
+    test('render correctly when logged out', () => {
         const component = renderer.create(
-            <Footer />
+            <Footer loggedIn={false} />
         );
         const snap = component.toJSON();
         expect(snap).toMatchSnapshot();
     });
 
-    test('render correctly with params', () => {
+    test('render correctly when logged in', () => {
         const component = renderer.create(
             <Footer
-                headline="Custom Footer Headline"
-                urls={{
-                    FACEBOOK: 'https://facebook.com',
-                    PHXWEBSITE: 'https://meinereise.phoenixreisen.com'
-                }}
+                loggedIn={true}
+                username='Fabian'
             />
         );
         const snap = component.toJSON();

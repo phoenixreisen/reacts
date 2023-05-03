@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer should render correctly when logged in 1`] = `
+<article
+  className="intern-footer"
+>
+  <div
+    className="wrapper wrapper--large"
+  >
+    <hr />
+    <div
+      className="tr mr3"
+    >
+      <span>
+        eingeloggt als 
+        <span
+          className="f4"
+        >
+          Fabian
+        </span>
+      </span>
+      <span
+        className="mh3"
+      >
+        |
+      </span>
+      <a
+        href="/cdn/mitarbeiter/login/"
+      >
+        <i
+          className="fas fa-sign-out-alt mr1"
+        />
+         abmelden
+      </a>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`footer should render correctly when logged out 1`] = `
+<article
+  className="intern-footer"
+>
+  <div
+    className="wrapper wrapper--large"
+  >
+    <hr />
+    <div
+      className="tr mr3"
+    >
+      <a
+        href="/cdn/mitarbeiter/login/"
+      >
+        <i
+          className="fas fa-sign-in-alt mr1"
+        />
+         anmelden
+      </a>
+    </div>
+  </div>
+</article>
+`;

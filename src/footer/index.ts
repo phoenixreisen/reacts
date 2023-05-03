@@ -1,3 +1,7 @@
-import Footer from "./footer.r";
+import FooterIntern from './footer.intern.r';
+import FooterExtern from "./footer.r";
 
-export default Footer;
+export const ExternFooter = FooterExtern;
+export const InternFooter = FooterIntern;
+
+export default FooterExtern;

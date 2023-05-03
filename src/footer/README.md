@@ -1,6 +1,7 @@
 # Phoenix Footer
 
-Standard-Footer für diverse (standalone) Phoenix-Applikationen.
+Standard-Footer für diverse (standalone) Phoenix-Applikationen. Einmal ein externer Footer für öffentlich zugängliche Applikationen,
+sowie ein interner Footer für Intranet-Anwendungen.
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
 
@@ -19,12 +20,18 @@ npm install --save @phoenixreisen/reacts
 ## Anwendung
 
 ```tsx
-import Footer from '@phoenixreisen/reacts/footer';
+import Footer from '@phoenixreisen/reacts/src/footer';
 
 <Footer headline="für etwas Vorfreude" env="[staging|production]" />
 ```
 
 Wird für `env` "staging" angegeben, wird `border-top` gelb eingefärbt.
+
+```tsx
+import Footer from '@phoenixreisen/reacts/src/footer/footer.intern.m';
+
+<Footer loggedIn={true|false} username="Fabian" />
+```
 
 ## Demo für Github Page
 

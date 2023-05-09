@@ -16,6 +16,7 @@ const demos = [
     'banners',
     'tooltip',
     'dropdown',
+    'timeline',
     'accordion',
     'notification',
 ].map(current => {

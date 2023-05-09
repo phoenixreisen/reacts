@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline should render centered line 1`] = `
+<section
+  className="timeline timeline--static timeline--center"
+>
+  <article
+    className="timeline-box"
+  >
+    <span
+      className="timeline-axis"
+      style={
+        {
+          "transition": "height 500ms ease 0ms",
+        }
+      }
+    />
+    <div
+      className="timeline-center-box"
+    >
+      <i
+        className="timeline-circle"
+      />
+      <div
+        className="timeline-content timeline-content--left"
+      >
+        <div>
+          <strong>
+            Tab II
+          </strong>
+        </div>
+      </div>
+      <div
+        className="timeline-content timeline-content--right"
+      />
+    </div>
+  </article>
+  <article
+    className="timeline-box"
+  >
+    <span
+      className="timeline-axis"
+      style={
+        {
+          "transition": "height 500ms ease 500ms",
+        }
+      }
+    />
+    <div
+      className="timeline-center-box"
+    >
+      <i
+        className="timeline-circle"
+      />
+      <div
+        className="timeline-content timeline-content--left"
+      />
+      <div
+        className="timeline-content timeline-content--right"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+`;
+
+exports[`Timeline should render left line 1`] = `
+<section
+  className="timeline  timeline--left"
+>
+  <span
+    className="timeline-axis"
+  />
+  <article
+    className="timeline-box"
+  >
+    <div
+      className="timeline-left-box"
+    >
+      <i
+        className="timeline-circle"
+      />
+      <div
+        className="timeline-content"
+      >
+        <div>
+          <strong>
+            Tab I
+          </strong>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article
+    className="timeline-box"
+  >
+    <div
+      className="timeline-left-box"
+    >
+      <i
+        className="timeline-circle"
+      />
+      <div
+        className="timeline-content"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+`;

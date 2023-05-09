@@ -15,11 +15,11 @@ npm install --save @phoenixreisen/reacts
 ## Anwendung
 
 ```ts
-import <KOMPONENTE> from '@phoenixreisen/reacts/<KOMPONENTE>';
+import <KOMPONENTE> from '@phoenixreisen/reacts/src/<KOMPONENTE>';
 
 // zum Beispiel
-import Loader from '@phoenixreisen/reacts/loader';
-import Header from '@phoenixreisen/reacts/header';
+import Loader from '@phoenixreisen/reacts/src/loader';
+import Header from '@phoenixreisen/reacts/src/header';
 ```
 
 Weitere Informationen bzgl. Einbindung & Aufruf sind in der Readme der jeweiligen Komponente hinterlegt.
@@ -32,6 +32,7 @@ Weitere Informationen bzgl. Einbindung & Aufruf sind in der Readme der jeweilige
 - [Slider](./src/slider/README.md)
 - [Banners](./src/banners/README.md)
 - [Tooltip](./src/tooltip/README.md)
+- [Timeline](./src/timeline/README.md)
 - [Dropdown](./src/dropdown/README.md)
 - [Akkordeon](./src/accordion/README.md)
 - [Notifications](./src/notification/README.md)

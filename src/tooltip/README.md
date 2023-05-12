@@ -23,14 +23,26 @@ import Tooltip from '@phoenixreisen/reacts/tooltip';
 
 // API
 
+export interface Props {
+    event?: 'hover' | 'click',
+    type?: 'component' | 'text',
+    position?: 'above' | 'right' | 'below' | 'left',
+    TipComponent: React.ReactNode,
+    TextComponent: React.ReactNode,
+}
+
+// Aufruf
+
 <Tooltip 
-    event="hover"                   // hover, click
-    color="success"                 // info, success, warning, danger
-    position="left"                 // above, below, left, right
-    text="Hover mich!"              // Freitext
-    iconname="fa-home"              // Fontawesome Iconname
-    tooltip="Ich bin der Tooltip!"  // entweder Text (nicht zu lang)
-    TipComponent={ <Content /> }    // oder React Komponente
+    event="click"
+    position="right"
+    type='component'
+    TipComponent={
+        <Content />
+    }
+    TextComponent={
+        <i className="fas fa-info-circle c-warning"></i>
+    }
 />
 ```
 

@@ -13,6 +13,7 @@ const demos = [
     'footer',
     'loader',
     'slider',
+    'webtext',
     'banners',
     'tooltip',
     'dropdown',

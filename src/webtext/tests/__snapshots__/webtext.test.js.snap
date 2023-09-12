@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Webtext should have some default classes 1`] = `
+<article
+  className="webtext test-class"
+  title="webtext3"
+>
+  Dies ist der dritte Webtext im Webtext-Objekt.
+</article>
+`;

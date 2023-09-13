@@ -79,7 +79,7 @@ describe('Webtext should', () => {
         const stripped = striptags(Webtexts.webtext5, ALLOWED_HTML);
         expect(document.querySelector('.webtext').innerHTML).toContain('<strong>');
         expect(document.querySelector('.webtext').innerHTML).not.toContain('<code>');
-        expect(document.querySelector('.webtext').innerHTML).toBe(stripped.trim());
+        expect(document.querySelector('.webtext').innerHTML).toBe(`<span>${stripped}</span>`);
     });
 
     test('insert given css class', () => {
@@ -91,5 +91,20 @@ describe('Webtext should', () => {
             />
         );
         expect(document.querySelector('.webtext').classList.contains('test-class')).toBeTruthy();
+    });
+
+    test('add a icon linked to webtext manager as suffix', () => {
+        const component = render(
+            <Webtext
+                webtexts={Webtexts}
+                webtextName='webtext3'
+                wtmLink='https://www.phoenixreisen.com'
+                wtmLinkTitle='Phoenix Reisen Website aufrufen'
+            />
+        );
+        expect(document.querySelector('.webtext a')).toBeDefined();
+        expect(document.querySelector('.fa-external-link-alt')).toBeDefined();
+        expect(document.querySelector('.webtext a').getAttribute('href')).toBe('https://www.phoenixreisen.com');
+        expect(document.querySelector('.webtext a').getAttribute('title')).toBe('Phoenix Reisen Website aufrufen');
     });
 });

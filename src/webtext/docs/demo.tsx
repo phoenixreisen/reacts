@@ -67,6 +67,14 @@ export const Demo = () => {
                 showWebtextName={false}
                 cssClass="webtext-demo-5"
             />
+
+            <h3>Webtext mit Link zum Webtext Manager</h3>
+
+            <Webtext
+                webtexts={Webtexts}
+                webtextName="webtext3"
+                wtmLink={'https://meinereise.phoenixreisen.com/cdn/mitarbeiter/webtext-verwaltung/#!form/tefra__text/MeinPhoenix'}
+            />
         </section>
     );
 };

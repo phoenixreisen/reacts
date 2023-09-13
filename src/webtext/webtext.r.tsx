@@ -14,6 +14,8 @@ interface Props {
     asPlainText?: boolean,
     showWebtextName?: boolean,
     allowedHtmlTags?: Array<string>,
+    wtmLinkTitle?: string,
+    wtmLink?: string,
 }
 
 //--- Variables & Constants -----
@@ -30,8 +32,8 @@ export const ALLOWED_HTML = [
 //--- Component -----
 
 export const Webtext = (props: Props) => {
-    const { cssClass } = props;
     const { webtexts, webtextName } = props;
+    const { cssClass, wtmLink, wtmLinkTitle } = props;
     const { allowedHtmlTags, showWebtextName, asPlainText } = props;
 
     useEffect(() => {
@@ -58,18 +60,24 @@ export const Webtext = (props: Props) => {
 
     if(!webtext) {
         return null;
-    } else if(asPlainText) {
-        return (
-            <article className={`webtext ${cssClass || ''}`} title={title}>
-                {webtext}
-            </article>
-        )
     } else {
-        return <article 
-            title={title}
-            className={`webtext ${cssClass}`}
-            dangerouslySetInnerHTML={{__html: striptags(webtext, allowedHtmlTags || ALLOWED_HTML)}}
-        />;
+        return (
+            <article title={title} className={`webtext ${cssClass || ''}`}>
+                {asPlainText
+                    ? <span>{webtext}</span>
+                    : <span dangerouslySetInnerHTML={{__html: striptags(webtext, allowedHtmlTags || ALLOWED_HTML)}} />
+                }
+                {wtmLink && (
+                    <a href={wtmLink} 
+                        target="_blank" 
+                        className="ml1" 
+                        rel="noopener noreferrer" 
+                        title={wtmLinkTitle || 'Im Webtext-Manager öffnen'}>
+                        <i className="fas fa-external-link-alt" />
+                    </a>
+                )}
+            </article>
+        );
     }
 };
 

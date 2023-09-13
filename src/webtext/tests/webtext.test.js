@@ -79,7 +79,7 @@ describe('Webtext should', () => {
         const stripped = striptags(Webtexts.webtext5, ALLOWED_HTML);
         expect(document.querySelector('.webtext').innerHTML).toContain('<strong>');
         expect(document.querySelector('.webtext').innerHTML).not.toContain('<code>');
-        expect(document.querySelector('.webtext').innerHTML).toBe(`<span>${stripped}</span>`);
+        expect(document.querySelector('.webtext').innerHTML).toBe(`<div>${stripped}</div>`);
     });
 
     test('insert given css class', () => {
@@ -98,6 +98,7 @@ describe('Webtext should', () => {
             <Webtext
                 webtexts={Webtexts}
                 webtextName='webtext3'
+                showWebtextName={true}
                 wtmLink='https://www.phoenixreisen.com'
                 wtmLinkTitle='Phoenix Reisen Website aufrufen'
             />
@@ -106,5 +107,19 @@ describe('Webtext should', () => {
         expect(document.querySelector('.fa-external-link-alt')).toBeDefined();
         expect(document.querySelector('.webtext a').getAttribute('href')).toBe('https://www.phoenixreisen.com');
         expect(document.querySelector('.webtext a').getAttribute('title')).toBe('Phoenix Reisen Website aufrufen');
+    });
+
+    test('only show WTM link when showWebtextName is set', () => {
+        const component = render(
+            <Webtext
+                webtexts={Webtexts}
+                webtextName='webtext3'
+                showWebtextName={false}
+                wtmLink='https://www.phoenixreisen.com'
+                wtmLinkTitle='Phoenix Reisen Website aufrufen'
+            />
+        );
+        expect(document.querySelector('.webtext a')).toBeNull();
+        expect(document.querySelector('.fa-external-link-alt')).toBeNull();
     });
 });

@@ -63,19 +63,20 @@ export const Webtext = (props: Props) => {
     } else {
         return (
             <article title={title} className={`webtext ${cssClass || ''}`}>
-                {asPlainText
-                    ? <span>{webtext}</span>
-                    : <span dangerouslySetInnerHTML={{__html: striptags(webtext, allowedHtmlTags || ALLOWED_HTML)}} />
-                }
-                {wtmLink && (
-                    <a href={wtmLink} 
-                        target="_blank" 
-                        className="ml1" 
-                        rel="noopener noreferrer" 
-                        title={wtmLinkTitle || 'Im Webtext-Manager öffnen'}>
-                        <i className="fas fa-external-link-alt" />
-                    </a>
+                {(showWebtextName && wtmLink) && (
+                    <div className="f6">
+                        <a href={wtmLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            title={wtmLinkTitle || 'Im Webtext-Manager öffnen'}>
+                            <i className="fas fa-external-link-alt" /> Webtext ändern
+                        </a>
+                    </div>
                 )}
+                {asPlainText
+                    ? <div>{webtext}</div>
+                    : <div dangerouslySetInnerHTML={{__html: striptags(webtext, allowedHtmlTags || ALLOWED_HTML)}} />
+                }
             </article>
         );
     }

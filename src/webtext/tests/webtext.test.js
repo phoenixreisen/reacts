@@ -109,6 +109,18 @@ describe('Webtext should', () => {
         expect(document.querySelector('.webtext a').getAttribute('title')).toBe('Phoenix Reisen Website aufrufen');
     });
 
+    test('show webtextName in wtmLink title', () => {
+        const component = render(
+            <Webtext
+                webtexts={Webtexts}
+                webtextName='webtext3'
+                showWebtextName={true}
+                wtmLink='https://www.phoenixreisen.com'
+            />
+        );
+        expect(document.querySelector('.webtext a').getAttribute('title')).toBe('webtext3 im Webtext-Manager öffnen');
+    });
+
     test('only show WTM link when showWebtextName is set', () => {
         const component = render(
             <Webtext

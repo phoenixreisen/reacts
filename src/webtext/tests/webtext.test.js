@@ -134,4 +134,20 @@ describe('Webtext should', () => {
         expect(document.querySelector('.webtext a')).toBeNull();
         expect(document.querySelector('.fa-external-link-alt')).toBeNull();
     });
+
+    test('show alternative text if one is given but no webtext is found', () => {
+        const altText = 'Alternative Text';
+
+        const component = render(
+            <Webtext
+                altText={altText}
+                webtexts={Webtexts}
+                showWebtextName={false}
+                webtextName='not-existent'
+            />
+        );
+        expect(document.querySelector('.webtext')).toBeDefined();
+        expect(document.querySelector('.webtext').textContent).toBe(altText);
+        expect(document.querySelector('.webtext').textContent).not.toBe('Irgendwas');
+    });
 });

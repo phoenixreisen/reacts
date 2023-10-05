@@ -85,6 +85,15 @@ export const Demo = () => {
                 showWebtextName={true}
                 wtmLink={'https://meinereise.phoenixreisen.com/cdn/mitarbeiter/webtext-verwaltung/#!form/tefra__text/MeinPhoenix'}
             />
+
+            <h3>Webtext mit Alternativtext</h3>
+
+            <Webtext
+                webtexts={Webtexts}
+                showWebtextName={false}
+                webtextName="gibts-nicht"
+                altText={'Ich werde stattdessen angezeigt.'}
+            />
         </section>
     );
 };

@@ -63,9 +63,8 @@ export const Webtext = (props: Props) => {
 
     if(!webtext && altText) {
         return (
-            <article title={title} className={`webtext ${cssClass || ''}`}>
-                <div>{altText}</div>
-            </article>
+            <article title={title} className={`webtext ${cssClass || ''}`}
+                dangerouslySetInnerHTML={{__html: striptags(altText, allowedHtmlTags || ALLOWED_HTML)}} />
         );
     } else if(!webtext) {
         return null;

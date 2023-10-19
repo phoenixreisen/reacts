@@ -38,9 +38,7 @@ export const Webtext = (props: Props) => {
     const { allowedHtmlTags, showWebtextName, asPlainText } = props;
 
     useEffect(() => {
-        if(props.altText && typeof props.altText !== 'string') {
-            throw new Error('You have to set prop "altText" with a string or to not set it at all.');
-        } else if(props.cssClass && typeof props.cssClass !== 'string') {
+        if(props.cssClass && typeof props.cssClass !== 'string') {
             throw new Error('You have to set prop "cssClass" with a string or to not set it at all.');
         } else if(typeof props.webtexts !== 'object' || Object.keys(props.webtexts).length === 0) {
             throw new Error('You have to set prop "webtexts" with an object of key-string-pairs.');

@@ -32,6 +32,7 @@ Weitere Informationen bzgl. Einbindung & Aufruf sind in der Readme der jeweilige
 - [Slider](./src/slider/README.md)
 - [Banners](./src/banners/README.md)
 - [Tooltip](./src/tooltip/README.md)
+- [Webtext](./src/webtext/README.md)
 - [Timeline](./src/timeline/README.md)
 - [Dropdown](./src/dropdown/README.md)
 - [Akkordeon](./src/accordion/README.md)

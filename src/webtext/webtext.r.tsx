@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import striptags from 'striptags';
 
 //--- Types -----
@@ -15,6 +15,7 @@ interface Props {
     asPlainText?: boolean,
     showWebtextName?: boolean,
     allowedHtmlTags?: Array<string>,
+    placeholders?: Array<[string, string]>,
     wtmLinkTitle?: string,
     wtmLink?: string,
 }
@@ -33,10 +34,16 @@ export const ALLOWED_HTML = [
 //--- Component -----
 
 export const Webtext = (props: Props) => {
+    const { wtmLink, wtmLinkTitle } = props;
+    const { cssClass, placeholders } = props;
     const { webtexts, webtextName, altText } = props;
-    const { cssClass, wtmLink, wtmLinkTitle } = props;
     const { allowedHtmlTags, showWebtextName, asPlainText } = props;
 
+    const [ webtext, setWebtext ] = useState(webtexts?.[webtextName] ?? null);
+
+    /**
+     * props validation.
+     */
     useEffect(() => {
         if(props.cssClass && typeof props.cssClass !== 'string') {
             throw new Error('You have to set prop "cssClass" with a string or to not set it at all.');
@@ -53,7 +60,17 @@ export const Webtext = (props: Props) => {
         }
     }, []);
 
-    const webtext = webtexts[webtextName] || null;
+    /**
+     * Find webtext and replace placeholders.
+     */
+    useEffect(() => {
+        let webtext = webtexts[webtextName] || null;
+        
+        placeholders?.forEach(([placeholder, value]) => {
+            webtext = webtext?.replaceAll(placeholder, value) ?? null;
+        });
+        setWebtext(webtext);
+    }, [ webtextName, webtexts, placeholders ]);
         
     const title = (!!webtextName && showWebtextName)
         ? webtextName 

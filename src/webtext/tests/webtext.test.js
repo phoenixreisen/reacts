@@ -150,4 +150,25 @@ describe('Webtext should', () => {
         expect(document.querySelector('.webtext').textContent).toBe(altText);
         expect(document.querySelector('.webtext').textContent).not.toBe('Irgendwas');
     });
+
+    test('replace placeholders with given values', () => {
+        const component = render(
+            <Webtext
+                webtexts={Webtexts}
+                webtextName='webtext6'
+                placeholders={[
+                    ['{{anzahl}}', '2'],
+                    ['{{name}}', 'Fabian'],
+                    ['{{eigenschaft}}', 'lieben'],
+                ]}
+            />
+        );
+        expect(document.querySelector('.webtext')).toBeDefined();
+        expect(document.querySelector('.webtext').textContent).toContain('2');
+        expect(document.querySelector('.webtext').textContent).toContain('Fabian');
+        expect(document.querySelector('.webtext').textContent).toContain('lieben');
+        expect(document.querySelector('.webtext').textContent).not.toContain('{{name}}');
+        expect(document.querySelector('.webtext').textContent).not.toContain('{{anzahl}}');
+        expect(document.querySelector('.webtext').textContent).not.toContain('{{eigenschaft}}');
+    });
 });

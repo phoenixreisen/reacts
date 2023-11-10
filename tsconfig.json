@@ -3,6 +3,11 @@
 		"outDir": "./dist/",
 		"target": "ES5",
 
+		"lib": [
+			"DOM",
+			"ESNext"
+		],
+
 		"jsx": "react",
 		"module": "ESNext",
 		"moduleResolution": "Node",

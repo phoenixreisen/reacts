@@ -171,4 +171,43 @@ describe('Webtext should', () => {
         expect(document.querySelector('.webtext').textContent).not.toContain('{{anzahl}}');
         expect(document.querySelector('.webtext').textContent).not.toContain('{{eigenschaft}}');
     });
+
+    test('render markdown correctly', async () => {
+        const component = renderer.create(
+            <Webtext
+                asMarkdown={true}
+                webtexts={Webtexts}
+                webtextName='webtext7'
+            />
+        );
+        await waitFor(() => expect(document.querySelector('h2')).toBeDefined());
+        const snap = component.toJSON();
+        expect(snap).toMatchSnapshot();
+    });
+
+    test('replace placeholders with given values', () => {
+        const component = render(
+            <Webtext
+                asMarkdown={true}
+                webtexts={Webtexts}
+                webtextName='webtext7'
+            />
+        );
+        expect(document.querySelector('.webtext')).toBeDefined();
+        expect(document.querySelector('.webtext').innerHTML).toContain('<a href=');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<h2>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<h3>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<em>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<ul>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<li>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('<strong>');
+        expect(document.querySelector('.webtext').innerHTML).toContain('Markdown Überschrift');
+        expect(document.querySelector('.webtext').innerHTML).toContain('Hier wieder etwas Text');
+
+        expect(document.querySelector('.webtext').innerHTML).not.toContain('#');
+        expect(document.querySelector('.webtext').innerHTML).not.toContain('*');
+        expect(document.querySelector('.webtext').innerHTML).not.toContain('==');
+        expect(document.querySelector('.webtext').innerHTML).not.toContain(':-)');
+    });
+
 });

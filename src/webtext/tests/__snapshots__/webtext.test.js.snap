@@ -10,3 +10,27 @@ exports[`Webtext should have some default classes 1`] = `
   </div>
 </article>
 `;
+
+exports[`Webtext should render markdown correctly 1`] = `
+<article
+  className="webtext "
+>
+  <div
+    dangerouslySetInnerHTML={
+      {
+        "__html": "<h2>H2 Markdown Überschrift</h2>
+<h3>H3 Markdown Überschrift</h3>
+<p>Etwas Text mit <em>kursiv</em> und <strong>fett</strong> und einem {{placeholder}}.<br>
+Hier noch ein Link zur Website: <a href="https://www.phoenixreisen.com/">https://www.phoenixreisen.com/</a></p>
+<ul>
+<li>Liste</li>
+<li>mit</li>
+<li>Punkten</li>
+</ul>
+<p>Hier wieder etwas Text. 😃</p>
+",
+      }
+    }
+  />
+</article>
+`;

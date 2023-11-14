@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
+import json from '@rollup/plugin-json';
 import scss from 'rollup-plugin-scss';
 import copy from 'rollup-plugin-copy';
 import url from '@rollup/plugin-url';
@@ -34,7 +35,10 @@ const demos = [
             css(),
             typescript(),
             commonjs(),
-            resolve(),
+            json(),
+            resolve({
+                preferBuiltins: false
+            }),
             url({
                 limit: 0
             }),

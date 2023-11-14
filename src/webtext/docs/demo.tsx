@@ -19,6 +19,18 @@ export const Webtexts = {
         Hier sind {{anzahl}} Platzhalter enthalten, die ersetzt werden. 
         Die {{eigenschaft}} landen sehr schnell im Gefängnis. {{name}}
     `,
+    'webtext7': `
+## H2 Markdown Überschrift
+### H3 Markdown Überschrift
+
+==Etwas== Text mit *kursiv* und **fett** und einem {{placeholder}}.
+Hier noch ein Link zur Website: https://www.phoenixreisen.com/
+
+* Liste
+* mit
+* Punkten
+
+Hier wieder etwas Text. :-)`,
 }
 
 //--- Tooltip Component in several variations -----
@@ -107,8 +119,20 @@ export const Demo = () => {
                 webtextName="webtext6"
                 placeholders={[
                     ['{{anzahl}}', '3'],
-                    ['{{name}}', 'Hem Berger'],
+                    ['{{name}}', 'Ham Berger'],
                     ['{{eigenschaft}}', 'aggressiven'],
+                ]}
+            />
+
+            <h3>Webtext mit interpretiertem Markdown</h3>
+
+            <Webtext
+                asMarkdown={true}
+                webtexts={Webtexts}
+                showWebtextName={false}
+                webtextName="webtext7"
+                placeholders={[
+                    ['{{placeholder}}', 'Platzhalter im Markdown'],
                 ]}
             />
         </section>

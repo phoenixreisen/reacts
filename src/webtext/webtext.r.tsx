@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import striptags from 'striptags';
 
+import MarkdownIt from 'markdown-it';
+import markdownIns from 'markdown-it-ins';
+import markdownMark from 'markdown-it-mark';
+import markdownAbbr from 'markdown-it-abbr';
+import markdownEmoji from 'markdown-it-emoji';
+import markdownDefList from 'markdown-it-deflist';
+
 //--- Types -----
 
 interface Webtexts {
@@ -12,6 +19,7 @@ interface Props {
     cssClass?: string,
     webtexts: Webtexts,
     webtextName: string,
+    asMarkdown?: boolean,
     asPlainText?: boolean,
     showWebtextName?: boolean,
     allowedHtmlTags?: Array<string>,
@@ -31,14 +39,34 @@ export const ALLOWED_HTML = [
     'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'br', 'span',
 ];
 
+/**
+ * Instance of Markdown renderer.
+ * Plus some helpful plugins.
+ */
+const md = new MarkdownIt({
+    breaks: true,
+    linkify: true,
+});
+md.use(markdownIns);
+md.use(markdownMark);
+md.use(markdownAbbr);
+md.use(markdownEmoji);
+md.use(markdownDefList);
+
 //--- Component -----
 
 export const Webtext = (props: Props) => {
     const { wtmLink, wtmLinkTitle } = props;
     const { cssClass, placeholders } = props;
+    const { asPlainText, asMarkdown } = props;
     const { webtexts, webtextName, altText } = props;
-    const { allowedHtmlTags, showWebtextName, asPlainText } = props;
+    const { allowedHtmlTags, showWebtextName } = props;
 
+    /**
+     * Rendered Webtext to display.
+     * Values can be replaced by placeholders or 
+     * contained Markdown can be interpreted.
+     */
     const [ webtext, setWebtext ] = useState(webtexts?.[webtextName] ?? null);
 
     /**
@@ -57,6 +85,8 @@ export const Webtext = (props: Props) => {
             throw new Error('You have to set prop "showWebtextName" with a boolean or to not set it at all.');
         } else if(props.allowedHtmlTags && !Array.isArray(props.allowedHtmlTags)) {
             throw new Error('You have to set prop "allowedTags" with an array of strings.')
+        } else if(props.asMarkdown && props.asPlainText) {
+            throw new Error('You can not set both props "asMarkdown" and "asPlainText".');
         }
     }, []);
 
@@ -69,8 +99,11 @@ export const Webtext = (props: Props) => {
         placeholders?.forEach(([placeholder, value]) => {
             webtext = webtext?.replaceAll(placeholder, value) ?? null;
         });
+        if(asMarkdown) {
+            webtext = md.render(webtext);
+        }
         setWebtext(webtext);
-    }, [ webtextName, webtexts, placeholders ]);
+    }, [ webtextName, webtexts, placeholders, asMarkdown ]);
         
     const title = (!!webtextName && showWebtextName)
         ? webtextName 

@@ -111,6 +111,13 @@ export const Demo = () => {
                 altText={'Ich werde stattdessen angezeigt.'}
             />
 
+            <Webtext
+                webtexts={Webtexts}
+                showWebtextName={false}
+                webtextName="gibts-nicht"
+                altText={'<p>Ich bin <em>HTML</em> als <strong>String</strong>, werder aber gerendert.</p>'}
+            />
+
             <h3>Webtext mit ersetzten Platzhaltern</h3>
 
             <Webtext

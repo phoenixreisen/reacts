@@ -210,4 +210,19 @@ describe('Webtext should', () => {
         expect(document.querySelector('.webtext').innerHTML).not.toContain(':-)');
     });
 
+    test('render alternative text strings with HTML correctly', async () => {
+        const altText = '<p>Ich bin <em>HTML</em> als <strong>String</strong>, werde aber gerendert.</p>';
+
+        const component = renderer.create(
+            <Webtext
+                asMarkdown={true}
+                altText={altText}
+                webtexts={Webtexts}
+                webtextName='not-found'
+            />
+        );
+        await waitFor(() => expect(document.querySelector('em')).toBeDefined());
+        const snap = component.toJSON();
+        expect(snap).toMatchSnapshot();
+    });
 });

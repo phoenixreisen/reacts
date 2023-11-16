@@ -87,6 +87,8 @@ export const Webtext = (props: Props) => {
             throw new Error('You have to set prop "allowedTags" with an array of strings.')
         } else if(props.asMarkdown && props.asPlainText) {
             throw new Error('You can not set both props "asMarkdown" and "asPlainText".');
+        } else if(props.altText && typeof props.altText !== 'string') {
+            throw new Error('You have to set prop "altText" with a string (even if it contains HTML) or to not set it at all.');
         }
     }, []);
 
@@ -96,11 +98,15 @@ export const Webtext = (props: Props) => {
     useEffect(() => {
         let webtext = webtexts[webtextName] || null;
         
-        placeholders?.forEach(([placeholder, value]) => {
-            webtext = webtext?.replaceAll(placeholder, value) ?? null;
-        });
-        if(asMarkdown) {
-            webtext = md.render(webtext);
+        if(webtext) {
+            webtext = webtext.trim();
+
+            placeholders?.forEach(([placeholder, value]) => {
+                webtext = webtext?.replaceAll(placeholder, value) ?? null;
+            });
+            if(asMarkdown) {
+                webtext = md.render(webtext);
+            }
         }
         setWebtext(webtext);
     }, [ webtextName, webtexts, placeholders, asMarkdown ]);
@@ -112,7 +118,8 @@ export const Webtext = (props: Props) => {
     if(!webtext && altText) {
         return (
             <article title={title} className={`webtext ${cssClass || ''}`}
-                dangerouslySetInnerHTML={{__html: striptags(altText, allowedHtmlTags || ALLOWED_HTML)}} />
+                dangerouslySetInnerHTML={{__html: striptags(altText.trim(), allowedHtmlTags || ALLOWED_HTML)}} 
+            />
         );
     } else if(!webtext) {
         return null;

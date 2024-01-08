@@ -30,8 +30,8 @@ type Props = {
 
     items: Array<{
         fas: string,
-        content: m.Component,
-        headline: m.Component | string,
+        content: React.ReactNode,
+        headline: React.ReactNode | string,
         type: 'primary'|'secondary',
     }>,
 }
@@ -46,7 +46,7 @@ const Prime = {
     headline: 'Hafen Bremen',
     content: {
         view() {
-            return (<div>PRIMARY ITEM</div>);
+            return ( <div>PRIMARY ITEM</div> );
         }
     }
 }
@@ -56,7 +56,7 @@ const Secondary = {
     headline: 'Ausflug XYZ',
     content: {
         view() {
-            return (<div>GRAY SECONDARY ITEM</div>);
+            return ( <div>GRAY SECONDARY ITEM</div> );
         }
     }
 }
@@ -66,17 +66,11 @@ const items = [ Prime, Secondary, Secondary, Secondary ];
 #### Aufruf
 
 ```ts
-import Accordion from '@phoenixreisen/reacts/accordion';
+import Accordion from '@phoenixreisen/reacts/src/accordion';
 
-// JSX
 <Accordion items={[0,1,2,1,3, 0,2,2,1,3, 0,1,2,3].map(current =>
     items[current]
 )} />
-
-// Hyperscript bzw. Javascript
-m(Accordion, { items: [0,1,2,1,3, 0,2,2,1,3, 0,1,2,3].map(current =>
-    items[current]
-)});
 ```
 
 ## Github Page
@@ -93,6 +87,7 @@ npm run compile:demos
 
 ```bash
 [npm install]
+
 npm run test
 ```
 

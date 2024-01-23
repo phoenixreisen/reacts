@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 export type ItemType = 'primary'|'secondary';
 
 export type Item = {
-    fas: string,
     type: ItemType,
     content: React.ReactNode,
     headline: React.ReactNode
+    fas: React.ReactNode | string,
 }
 
 export type Props = {
@@ -83,7 +83,11 @@ export const Accordion = (props:Props) => {
                     <article key={index} id={`acc-item-${index}`} className={`acc-item ${isOpen ? 'acc-open-item':''} acc-${type}`}>
                         <a href="#" onClick={(e) => { e.preventDefault(); toggle(props, index, type); }}
                             className={`acc-opener ${type === 'secondary' ? 'acc-opener--grayed':''}`}>
-                            <span><i className={`fas fa-${fas} mr1`}></i> {headline}</span>
+                            <span>
+                                { (fas && typeof fas !== 'string') && fas }
+                                { (fas && typeof fas === 'string') && <i className={`fas fa-${fas} mr1`}></i> } 
+                                { headline }
+                            </span>
                             <i className={'fas fa-chevron-up ml1'}></i>
                         </a>
                         <div className={'acc-section'} style={{maxHeight: isOpen ? `${maxHeight}px`:'0px'}}>

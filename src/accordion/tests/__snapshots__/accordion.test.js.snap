@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Akkordion should render correctly 1`] = `
+exports[`Accordion should render correctly 1`] = `
 <section
   className="accordion"
 >
@@ -17,7 +17,6 @@ exports[`Akkordion should render correctly 1`] = `
         <i
           className="fas fa-fa-user-1 mr1"
         />
-         
         Headline 1
       </span>
       <i
@@ -52,9 +51,8 @@ exports[`Akkordion should render correctly 1`] = `
     >
       <span>
         <i
-          className="fas fa-fa-user-2 mr1"
+          className="fa-user-2"
         />
-         
         Headline 2
       </span>
       <i
@@ -91,7 +89,6 @@ exports[`Akkordion should render correctly 1`] = `
         <i
           className="fas fa-fa-user-3 mr1"
         />
-         
         Headline 3
       </span>
       <i

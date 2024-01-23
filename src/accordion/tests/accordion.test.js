@@ -14,7 +14,7 @@ const items = [{
     headline: 'Headline 1',
     content: <div>Hallo 1</div>
 }, {
-    fas: 'fa-user-2',
+    fas: <i className="fa-user-2" />,
     type: 'secondary',
     headline: 'Headline 2',
     content: <div>Hallo 2</div>
@@ -29,7 +29,7 @@ const openClass = '.acc-open-item';
 
 //--- Tests -----
 
-describe('Akkordion should', () => {
+describe('Accordion should', () => {
 
     test('render correctly', () => {
         const component = renderer.create(

@@ -17,9 +17,9 @@ export const Port1 = {
 } as Item;
 
 export const Item1 = {
-    fas: 'leaf',
     type: 'secondary',
     headline: 'Ausflug in die Natur',
+    fas: <i className="fas fa-leaf mr1"></i>,
     content:
         <div>
             <img src={Pic} alt="Phoenix Flotte" className="img left" />
@@ -45,7 +45,6 @@ export const Item2 = {
 } as Item;
 
 export const Item3 = {
-    fas: 'train',
     type: 'secondary',
     headline: 'Ausflug auf\'s  Wasser',
     content:

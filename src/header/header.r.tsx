@@ -1,13 +1,17 @@
 import logo from './phx.logo.svg';
 import React from 'react';
 
-interface Attrs {
+//--- View Types -----
+
+type Attrs = {
     url?: string,
     tab?: string,
     title?: string,
     version?: string,
-    toggleNav?: (e?) => void
+    toggleNav?: (e?: React.MouseEvent) => void
 }
+
+//--- View -----
 
 export const Header = (props: Attrs) => {
     const { protocol, host, pathname } = location as Location;
@@ -32,8 +36,8 @@ export const Header = (props: Attrs) => {
 
             {props.toggleNav ?
                 <div className="header__nav-btn">
-                    <a href="#" title="Navigation ein- & ausblenden" className="nav-btn noprint"
-                        onClick={() => props.toggleNav()}>
+                    <a href={location.href} title="Navigation ein- & ausblenden" className="nav-btn noprint"
+                        onClick={(e) => { e.preventDefault(); props.toggleNav(); }}>
                         <i className="fas fa-bars"></i>
                     </a>
                 </div>

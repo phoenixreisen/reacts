@@ -67,7 +67,6 @@ exports[`Header should use given params correctly 1`] = `
   >
     <a
       className="nav-btn noprint"
-      href="#"
       onClick={[Function]}
       title="Navigation ein- & ausblenden"
     >

@@ -7,8 +7,8 @@ exports[`Loader should have some default classes & default text + icon 1`] = `
   <p
     className="loader__spinner"
   >
-    <i
-      className="fab fa-cuttlefish fa-spin"
+    <img
+      src="IMGPATH"
     />
   </p>
   <p
@@ -26,8 +26,8 @@ exports[`Loader should set an overlay class 1`] = `
   <p
     className="loader__spinner"
   >
-    <i
-      className="fa-blublu fa-spin"
+    <img
+      src="IMGPATH"
     />
     <br />
     ICH BIN EIN OVERLAY
@@ -42,8 +42,8 @@ exports[`Loader should show customized text & icon 1`] = `
   <p
     className="loader__spinner"
   >
-    <i
-      className="fas fa-blabla fa-spin"
+    <img
+      src="IMGPATH"
     />
   </p>
   <p

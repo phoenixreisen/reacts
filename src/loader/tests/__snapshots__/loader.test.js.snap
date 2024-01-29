@@ -7,14 +7,56 @@ exports[`Loader should have some default classes & default text + icon 1`] = `
   <p
     className="loader__spinner"
   >
-    <img
-      src="IMGPATH"
+    <i
+      className="fab fa-cuttlefish fa-spin"
     />
   </p>
   <p
     className="loader__text"
   >
     Daten werden geladen...
+  </p>
+</article>
+`;
+
+exports[`Loader should just show the icon without text 1`] = `
+<article
+  className="loader"
+>
+  <p
+    className="loader__spinner"
+  >
+    <i
+      className="fab fa-cuttlefish fa-spin"
+    />
+  </p>
+</article>
+`;
+
+exports[`Loader should just show the icon without text 2`] = `
+<article
+  className="loader"
+>
+  <p
+    className="loader__spinner"
+  >
+    <img
+      src="IMGPATH"
+    />
+  </p>
+</article>
+`;
+
+exports[`Loader should just show the icon without text but with Gif 1`] = `
+<article
+  className="loader"
+>
+  <p
+    className="loader__spinner"
+  >
+    <img
+      src="IMGPATH"
+    />
   </p>
 </article>
 `;
@@ -26,11 +68,33 @@ exports[`Loader should set an overlay class 1`] = `
   <p
     className="loader__spinner"
   >
-    <img
-      src="IMGPATH"
+    <i
+      className="fa-blublu fa-spin"
     />
     <br />
     ICH BIN EIN OVERLAY
+  </p>
+</article>
+`;
+
+exports[`Loader should show Phoenix Ship Gif instead of Cuttlefish Icon as loading icon 1`] = `
+<article
+  className="loader"
+>
+  <p
+    className="loader__spinner"
+  >
+    <img
+      src="IMGPATH"
+    />
+  </p>
+  <p
+    className="loader__text"
+  >
+    <i
+      className="fab fa-cuttlefish fa-spin mr2"
+    />
+    ICH ZEIGE DAS PHOENIX SCHIFF GIF
   </p>
 </article>
 `;
@@ -42,8 +106,8 @@ exports[`Loader should show customized text & icon 1`] = `
   <p
     className="loader__spinner"
   >
-    <img
-      src="IMGPATH"
+    <i
+      className="fas fa-blabla fa-spin"
     />
   </p>
   <p

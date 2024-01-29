@@ -23,3 +23,27 @@ test('Loader should set an overlay class', () => {
     const snap = component.toJSON();
     expect(snap).toMatchSnapshot();
 });
+
+test('Loader should show Phoenix Ship Gif instead of Cuttlefish Icon as loading icon', () => {
+    const component = renderer.create(
+        <Loader text="ICH ZEIGE DAS PHOENIX SCHIFF GIF" showGif={true} />
+    );
+    const snap = component.toJSON();
+    expect(snap).toMatchSnapshot();
+});
+
+test('Loader should just show the icon without text', () => {
+    const component = renderer.create(
+        <Loader text="ICH WERDE NICHT AUSGEGEBEN" noText={true} showGif={false} />
+    );
+    const snap = component.toJSON();
+    expect(snap).toMatchSnapshot();
+});
+
+test('Loader should just show the icon without text but with Gif', () => {
+    const component = renderer.create(
+        <Loader text="ICH WERDE NICHT AUSGEGEBEN" noText={true} showGif={true} />
+    );
+    const snap = component.toJSON();
+    expect(snap).toMatchSnapshot();
+});

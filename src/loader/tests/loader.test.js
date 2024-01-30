@@ -40,7 +40,7 @@ test('Loader should just show the icon without text', () => {
     expect(snap).toMatchSnapshot();
 });
 
-test('Loader should just show the icon without text but with Gif', () => {
+test('Loader should just show the Gif without text and icon', () => {
     const component = renderer.create(
         <Loader text="ICH WERDE NICHT AUSGEGEBEN" noText={true} showGif={true} />
     );

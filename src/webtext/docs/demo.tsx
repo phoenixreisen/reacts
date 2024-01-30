@@ -11,7 +11,7 @@ export const Webtexts = {
     'webtext5': 
         `<div>
             <a href="https://www.phoenixreisen.com">Phoenixreisen</a> macht 
-            in <span classname="c-primary">Kreufahrten</span>. Ich bekomme aber 
+            in <span classname="c-primary">Kreuzfahrten</span>. Ich bekomme aber 
             keine <strong>Suite</strong> mehr. Das 'code'-Element, um <code><strong>dieses 
             Wort</strong></code> sollte gestript worden sein.
         </div>`,

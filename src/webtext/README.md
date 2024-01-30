@@ -43,7 +43,7 @@ interface Attrs {
         'webtext5': 
             `<div>
                 <a href="https://www.phoenixreisen.com">Phoenixreisen</a> macht 
-                in <span class="c-primary">Kreufahrten</span>. Ich bekomme aber 
+                in <span class="c-primary">Kreuzfahrten</span>. Ich bekomme aber 
                 keine <strong>Suite</strong> mehr. Das 'code'-Element, um <code><strong>dieses 
                 Wort</strong></code> sollte gestript worden sein.
             </div>`

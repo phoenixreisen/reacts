@@ -40,7 +40,7 @@ export const Dropdown = (props:Props) => {
                 {Children.toArray(props.children).map((child: React.ReactNode, index: number) => {
                     return (
                         <div key={`item-${index}`} className={`dropdown-item dropdown-item-${index}`}
-                            onClick={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}>
+                            onClick={() => { setIsOpen(!isOpen); }}>
                             { child }
                         </div>
                     );

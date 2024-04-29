@@ -19,6 +19,20 @@ exports[`Loader should have some default classes & default text + icon 1`] = `
 </article>
 `;
 
+exports[`Loader should just show the Gif without text and icon 1`] = `
+<article
+  className="loader"
+>
+  <p
+    className="loader__spinner"
+  >
+    <img
+      src="IMGPATH"
+    />
+  </p>
+</article>
+`;
+
 exports[`Loader should just show the icon without text 1`] = `
 <article
   className="loader"
@@ -28,34 +42,6 @@ exports[`Loader should just show the icon without text 1`] = `
   >
     <i
       className="fab fa-cuttlefish fa-spin"
-    />
-  </p>
-</article>
-`;
-
-exports[`Loader should just show the icon without text 2`] = `
-<article
-  className="loader"
->
-  <p
-    className="loader__spinner"
-  >
-    <img
-      src="IMGPATH"
-    />
-  </p>
-</article>
-`;
-
-exports[`Loader should just show the icon without text but with Gif 1`] = `
-<article
-  className="loader"
->
-  <p
-    className="loader__spinner"
-  >
-    <img
-      src="IMGPATH"
     />
   </p>
 </article>

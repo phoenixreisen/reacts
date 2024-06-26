@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import striptags from 'striptags';
 
-import MarkdownIt from 'markdown-it';
+import markdownIt from 'markdown-it';
 import markdownIns from 'markdown-it-ins';
 import markdownMark from 'markdown-it-mark';
 import markdownAbbr from 'markdown-it-abbr';
-import markdownEmoji from 'markdown-it-emoji';
 import markdownDefList from 'markdown-it-deflist';
+import { full as markdownEmoji } from 'markdown-it-emoji';
 
 //--- Types -----
 
@@ -43,7 +43,7 @@ export const ALLOWED_HTML = [
  * Instance of Markdown renderer.
  * Plus some helpful plugins.
  */
-const md = new MarkdownIt({
+const md = new markdownIt({
     breaks: true,
     linkify: true,
 });

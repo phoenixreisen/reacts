@@ -12,7 +12,7 @@ exports[`Tooltip should also handle on click instead of hover 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis grün!
     </span>
@@ -27,7 +27,7 @@ exports[`Tooltip should also handle on click instead of hover 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       <article
         className="pa3 gray6 c-gray1"
@@ -70,7 +70,7 @@ exports[`Tooltip should also render React Components as tooltip 1`] = `
     Ich bin ein Tooltip
   </span>
   <span
-    className="tip  tip--below tip--hidden"
+    className="tip tip--hidden tip--below tip--text"
   >
     <article
       className="pa3 gray6 c-gray1"
@@ -112,7 +112,7 @@ exports[`Tooltip should have some default classes 1`] = `
     Tooltip
   </span>
   <span
-    className="tip  tip--below tip--hidden"
+    className="tip tip--hidden tip--below tip--text"
   >
     Hinweis!
   </span>
@@ -132,7 +132,7 @@ exports[`Tooltip should render colors 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis grüm!
     </span>
@@ -148,7 +148,7 @@ exports[`Tooltip should render colors 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis grüm!
     </span>
@@ -164,7 +164,7 @@ exports[`Tooltip should render colors 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis grüm!
     </span>
@@ -180,7 +180,7 @@ exports[`Tooltip should render colors 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis grüm!
     </span>
@@ -201,7 +201,7 @@ exports[`Tooltip should render positions 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--left tip--hidden"
+      className="tip tip--hidden tip--left tip--text"
     >
       Hinweis left!
     </span>
@@ -217,7 +217,7 @@ exports[`Tooltip should render positions 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--right tip--hidden"
+      className="tip tip--hidden tip--right tip--text"
     >
       Hinweis rechts!
     </span>
@@ -233,7 +233,7 @@ exports[`Tooltip should render positions 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--below tip--hidden"
+      className="tip tip--hidden tip--below tip--text"
     >
       Hinweis drunter!
     </span>
@@ -249,7 +249,7 @@ exports[`Tooltip should render positions 1`] = `
       Tooltip
     </span>
     <span
-      className="tip  tip--above tip--hidden"
+      className="tip tip--hidden tip--above tip--text"
     >
       Hinweis drüber!
     </span>
@@ -274,7 +274,7 @@ exports[`Tooltip should render text with icon 1`] = `
     </div>
   </span>
   <span
-    className="tip  tip--below tip--hidden"
+    className="tip tip--hidden tip--below tip--text"
   >
     WORK HARD, PLAY HARD
   </span>

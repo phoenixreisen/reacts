@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 //--- Types -----
 
@@ -17,6 +17,13 @@ export const Tooltip = (props: Props) => {
 
     const { position, event, type } = props;
     const { TextComponent, TipComponent } = props;
+
+    const classList = useMemo(() => {
+        const visibility = showTip ? 'tip--visible' : 'tip--hidden';
+        const positioning = !!position ? `tip--${position}` : 'tip--below';
+        const typing = type === 'component' ? 'tip--component' : 'tip--text';
+        return `${visibility} ${positioning} ${typing}`;
+    }, [showTip, position, type]);
     
     try {
         if(!TextComponent) {
@@ -30,8 +37,11 @@ export const Tooltip = (props: Props) => {
                 onMouseEnter={ !event || event === 'hover' ? () => setShowTip(true) : undefined }
                 onMouseLeave={ !event || event === 'hover' ? () => setShowTip(false) : undefined }
             >
-                <span className={'tooltip-text'}>{ TextComponent }</span>
-                <span className={`tip ${type === 'component' ? 'tip--component':''} ${!!position ? `tip--${position}`:'tip--below'} ${showTip ? 'tip--visible':'tip--hidden'}`}>
+                <span className={'tooltip-text'}>
+                    { TextComponent }
+                </span>
+                
+                <span className={`tip ${classList}`}>
                     { TipComponent }
                 </span>
             </article>

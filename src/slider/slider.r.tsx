@@ -1,4 +1,4 @@
-import type { SwiperOptions } from 'swiper/types/swiper-options';
+import type { SwiperOptions } from 'swiper/types';
 
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import React, { Children, useEffect, useState } from 'react';

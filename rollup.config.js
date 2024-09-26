@@ -33,7 +33,9 @@ const demos = [
         plugins: [
             scss(),
             css(),
-            typescript(),
+            typescript({
+                outDir: `./docs/${current}/`
+            }),
             commonjs(),
             json(),
             resolve({

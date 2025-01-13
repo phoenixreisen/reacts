@@ -8,20 +8,20 @@ import copy from 'rollup-plugin-copy';
 import url from '@rollup/plugin-url';
 
 const demos = [
-    'fuzzy-input'
-    // 'tabs',
-    // 'modal',
-    // 'header',
-    // 'footer',
-    // 'loader',
-    // 'slider',
-    // 'webtext',
-    // 'banners',
-    // 'tooltip',
-    // 'dropdown',
-    // 'timeline',
-    // 'accordion',
-    // 'notification',
+    'fuzzy-input',
+    'tabs',
+    'modal',
+    'header',
+    'footer',
+    'loader',
+    'slider',
+    'webtext',
+    'banners',
+    'tooltip',
+    'dropdown',
+    'timeline',
+    'accordion',
+    'notification',
 ].map(current => {
     return {
         input: `./src/${current}/docs/index.tsx`,

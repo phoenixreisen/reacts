@@ -12,4 +12,5 @@ babel.config.js
 spec/
 test/
 tests/
+docs/
 node_modules/

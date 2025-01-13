@@ -8,6 +8,7 @@ import copy from 'rollup-plugin-copy';
 import url from '@rollup/plugin-url';
 
 const demos = [
+    'fuzzy-input',
     'tabs',
     'modal',
     'header',

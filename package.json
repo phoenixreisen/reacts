@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/reacts",
-  "version": "2.6.11",
+  "version": "2.6.12",
   "description": "Sammlung von React Implementierungen für Komponenten des Design Systems.",
   "type": "module",
   "scripts": {
@@ -51,6 +51,7 @@
     "@rollup/plugin-typescript": "^12.1.0",
     "@rollup/plugin-url": "^8.0.1",
     "@testing-library/dom": "^10.2.0",
+    "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
     "@types/enzyme": "^3.10.10",
     "@types/jest": "^29.2.5",
@@ -68,6 +69,7 @@
     "gh-pages": "^6.1.1",
     "ignore-styles": "^5.0.1",
     "jest": "^29.3.1",
+    "jest-dom": "^4.0.0",
     "jest-environment-jsdom": "^29.3.1",
     "jsdom": "^25.0.1",
     "react-test-renderer": "^18.2.0",

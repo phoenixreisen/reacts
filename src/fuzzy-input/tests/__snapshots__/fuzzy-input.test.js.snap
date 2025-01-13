@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fuzzy Input should correctly focus a certain DOM item by Id 1`] = `
+<article
+  className="fuzzy-search fuzzy-show-result"
+>
+  <div
+    className=""
+  >
+    <label
+      className="textfield fuzzy-input"
+    >
+      <input
+        autoComplete="off"
+        data-testid="fuzzy-input"
+        disabled={false}
+        id="fuzzy-input"
+        maxLength={100}
+        name="fuzzy-input"
+        onInput={[Function]}
+        placeholder="..."
+        readOnly={false}
+        type="text"
+        value=""
+      />
+      <span
+        className="textfield__label"
+      >
+        Suche
+      </span>
+    </label>
+  </div>
+</article>
+`;
+
+exports[`Fuzzy Input should correctly focus a certain DOM item by Id 2`] = `
+<article
+  className="fuzzy-search fuzzy-show-result"
+>
+  <div
+    className=""
+  >
+    <label
+      className="textfield fuzzy-input"
+    >
+      <input
+        autoComplete="off"
+        data-testid="fuzzy-input"
+        disabled={false}
+        id="fuzzy-input"
+        maxLength={100}
+        name="fuzzy-input"
+        onInput={[Function]}
+        placeholder="..."
+        readOnly={false}
+        type="text"
+        value="Test"
+      />
+      <span
+        className="textfield__label"
+      >
+        Suche
+      </span>
+    </label>
+  </div>
+  <div
+    className="fuzzy-overlay fuzzy-result fuzzy-style"
+    data-testid="fuzzy-result"
+  >
+    <div
+      className="fadeIn animated faster"
+    >
+      <a
+        data-testid="fuzzy-input-item-0"
+        href="#"
+        id="fuzzy-input-item-0"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+      >
+        Test 1
+      </a>
+      <a
+        data-testid="fuzzy-input-item-1"
+        href="#"
+        id="fuzzy-input-item-1"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+      >
+        Test 2
+      </a>
+      <a
+        data-testid="fuzzy-input-item-2"
+        href="#"
+        id="fuzzy-input-item-2"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+      >
+        Test 3
+      </a>
+    </div>
+  </div>
+  <div
+    className="fuzzy-bg-layer"
+    onClick={[Function]}
+  />
+</article>
+`;
+
+exports[`Fuzzy Input should render button correctly 1`] = `
+<article
+  className="fuzzy-search fuzzy-show-result"
+>
+  <div
+    className=""
+  >
+    <label
+      className="textfield fuzzy-input"
+    >
+      <input
+        autoComplete="off"
+        data-testid="fuzzy-input"
+        disabled={false}
+        id="fuzzy-input"
+        maxLength={100}
+        name="fuzzy-input"
+        onInput={[Function]}
+        placeholder="..."
+        readOnly={false}
+        type="text"
+        value=""
+      />
+      <span
+        className="textfield__label"
+      >
+        Suche
+      </span>
+    </label>
+  </div>
+</article>
+`;
+
+exports[`Fuzzy Input should render button correctly 2`] = `
+<article
+  className="fuzzy-search fuzzy-show-result"
+>
+  <div
+    className="fuzzy-with-button"
+  >
+    <label
+      className="textfield fuzzy-input"
+    >
+      <input
+        autoComplete="off"
+        data-testid="fuzzy-input"
+        disabled={false}
+        id="fuzzy-input"
+        maxLength={100}
+        name="fuzzy-input"
+        onInput={[Function]}
+        placeholder="..."
+        readOnly={false}
+        type="text"
+        value=""
+      />
+      <span
+        className="textfield__label"
+      >
+        Suche
+      </span>
+    </label>
+    <button
+      className="btn btn--secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fas fa-list"
+      />
+    </button>
+  </div>
+</article>
+`;
+
+exports[`Fuzzy Input should render correctly oninit 1`] = `
+<article
+  className="fuzzy-search fuzzy-show-result"
+>
+  <div
+    className=""
+  >
+    <label
+      className="textfield fuzzy-input"
+    >
+      <input
+        autoComplete="off"
+        data-testid="fuzzy-input"
+        disabled={false}
+        id="fuzzy-input"
+        maxLength={100}
+        name="fuzzy-input"
+        onInput={[Function]}
+        placeholder="..."
+        readOnly={false}
+        type="text"
+        value=""
+      />
+      <span
+        className="textfield__label"
+      >
+        Suche
+      </span>
+    </label>
+  </div>
+</article>
+`;

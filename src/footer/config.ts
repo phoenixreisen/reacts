@@ -6,7 +6,6 @@ interface ConfigProps {
 export const Config: ConfigProps = {
     'headline': 'Sie finden uns auch auf',
     'urls': {
-        'PHXTV': 'https://www.phoenixreisen.tv/',
         'PHXWEBSITE': 'https://www.phoenixreisen.com',
         'TWITTER': 'https://twitter.com/phoenixreisen',
         'FACEBOOK': 'https://de-de.facebook.com/PHXTV/',

@@ -3,7 +3,6 @@ import React from 'react';
 
 //--- Icons -----
 
-import ICON_TV from './icons/tv.png';
 import ICON_YT from './icons/youtube.png';
 import ICON_FB from './icons/facebook.png';
 import ICON_QG from './icons/QG-Logo.png';
@@ -45,9 +44,6 @@ export const Footer = (props: Props) => {
                     </a>
                     <a href={urls.YOUTUBE} title="Phoenix Reisen TV auf YouTube" target="_blank" rel="noopener noreferrer">
                         <img src={ICON_YT} alt="Phoenix Reisen TV auf YouTube" />
-                    </a>
-                    <a href={urls.PHXTV} title="Phoenix TV" target="_blank" rel="noopener noreferrer">
-                        <img src={ICON_TV} alt="Phoenix TV" />
                     </a>
                     <a href={urls.INSTAGRAM} title="Phoenix Reisen auf Instagram" target="_blank" rel="noopener noreferrer">
                         <img src={ICON_INSTA} alt="Phoenix Reisen auf Instagram" />
